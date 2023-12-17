@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.webhook_delivery_data import WebhookDeliveryData
+from btcpay_greenfield_py.models.webhook_delivery_data import WebhookDeliveryData
 
 class TestWebhookDeliveryData(unittest.TestCase):
     """WebhookDeliveryData unit test stubs"""

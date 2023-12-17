@@ -1,4 +1,4 @@
-# openapi_client.CustodiansApi
+# btcpay_greenfield_py.CustodiansApi
 
 All URIs are relative to *http://localhost*
 
@@ -32,15 +32,15 @@ Add a custodial account to a store.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_custodian_account_request import CreateCustodianAccountRequest
-from openapi_client.models.custodian_account_data import CustodianAccountData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_custodian_account_request import CreateCustodianAccountRequest
+from btcpay_greenfield_py.models.custodian_account_data import CustodianAccountData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -50,7 +50,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -62,11 +62,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     store_id = 'store_id_example' # str | The Store ID
-    create_custodian_account_request = openapi_client.CreateCustodianAccountRequest() # CreateCustodianAccountRequest | 
+    create_custodian_account_request = btcpay_greenfield_py.CreateCustodianAccountRequest() # CreateCustodianAccountRequest | 
 
     try:
         # Add a custodial account to a store.
@@ -121,13 +121,13 @@ Deletes a custodial account
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -137,7 +137,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -149,9 +149,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID
     store_id = 'store_id_example' # str | The Store ID
 
@@ -204,14 +204,14 @@ Get store custodian account
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.custodian_account_data import CustodianAccountData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.custodian_account_data import CustodianAccountData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -221,7 +221,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -233,9 +233,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID
     store_id = 'store_id_example' # str | The Store ID
     asset_balances = False # bool | Enable if you want the result to include the 'assetBalances' field. This will make the call slower or could cause the call to fail if the asset balances cannot be loaded (i.e. due to a bad API key). (optional) (default to False)
@@ -294,14 +294,14 @@ Get a new deposit address for the custodian using the specified payment method (
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.custodians_get_store_custodian_account_deposit_address200_response import CustodiansGetStoreCustodianAccountDepositAddress200Response
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.custodians_get_store_custodian_account_deposit_address200_response import CustodiansGetStoreCustodianAccountDepositAddress200Response
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -311,7 +311,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -323,9 +323,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
     payment_method = 'payment_method_example' # str | The payment method to use for the deposit. Example: \"BTC-OnChain\" or \"BTC-Lightning\"
@@ -385,14 +385,14 @@ Get the current bid and ask price for converting one asset into another.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.quote_result_data import QuoteResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.quote_result_data import QuoteResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -402,7 +402,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -414,9 +414,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
     from_asset = 'from_asset_example' # str | The asset to convert.
@@ -478,14 +478,14 @@ Get the details about a past withdrawal.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.withdrawal_result_data import WithdrawalResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.withdrawal_result_data import WithdrawalResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -495,7 +495,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -507,9 +507,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
     withdrawal_id = 'withdrawal_id_example' # str | The Withdrawal ID.
@@ -567,14 +567,14 @@ List store custodian accounts
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.custodian_account_data import CustodianAccountData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.custodian_account_data import CustodianAccountData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -584,7 +584,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -596,9 +596,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     store_id = 'store_id_example' # str | The Store ID
     asset_balances = False # bool | Enable if you want the result to include the 'assetBalances' field. This will make the call slower or could cause the call to fail if the asset balances cannot be loaded (i.e. due to a bad API key). (optional) (default to False)
 
@@ -655,14 +655,14 @@ List all supported custodians for the BTCPay instance. You can install plugins t
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.custodian_data import CustodianData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.custodian_data import CustodianData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -672,7 +672,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -684,9 +684,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
 
     try:
         # List supported custodians
@@ -736,15 +736,15 @@ Get more information about a potential withdrawal including fees, minimum and ma
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.withdrawal_request_data import WithdrawalRequestData
-from openapi_client.models.withdrawal_simulation_result_data import WithdrawalSimulationResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.withdrawal_request_data import WithdrawalRequestData
+from btcpay_greenfield_py.models.withdrawal_simulation_result_data import WithdrawalSimulationResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -754,7 +754,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -766,14 +766,14 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
     payment_method = 'payment_method_example' # str | The payment method to be used for the withdrawal.
     qty = 3.4 # float | The quantity to simulate a withdrawal for.
-    withdrawal_request_data = openapi_client.WithdrawalRequestData() # WithdrawalRequestData | 
+    withdrawal_request_data = btcpay_greenfield_py.WithdrawalRequestData() # WithdrawalRequestData | 
 
     try:
         # Simulate a withdrawal
@@ -833,15 +833,15 @@ Trade one asset for another using a market order (=instant purchase with instant
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.trade_request_data import TradeRequestData
-from openapi_client.models.trade_result_data import TradeResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.trade_request_data import TradeRequestData
+from btcpay_greenfield_py.models.trade_result_data import TradeResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -851,7 +851,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -863,12 +863,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
-    trade_request_data = openapi_client.TradeRequestData() # TradeRequestData |  (optional)
+    trade_request_data = btcpay_greenfield_py.TradeRequestData() # TradeRequestData |  (optional)
 
     try:
         # Trade one asset for another
@@ -925,15 +925,15 @@ Update custodial account
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_custodian_account_request import CreateCustodianAccountRequest
-from openapi_client.models.custodian_account_data import CustodianAccountData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_custodian_account_request import CreateCustodianAccountRequest
+from btcpay_greenfield_py.models.custodian_account_data import CustodianAccountData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -943,7 +943,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -955,12 +955,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID
     store_id = 'store_id_example' # str | The Store ID
-    create_custodian_account_request = openapi_client.CreateCustodianAccountRequest() # CreateCustodianAccountRequest | 
+    create_custodian_account_request = btcpay_greenfield_py.CreateCustodianAccountRequest() # CreateCustodianAccountRequest | 
 
     try:
         # Update custodial account
@@ -1016,15 +1016,15 @@ Withdraw an asset to your store wallet.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.withdrawal_request_data import WithdrawalRequestData
-from openapi_client.models.withdrawal_result_data import WithdrawalResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.withdrawal_request_data import WithdrawalRequestData
+from btcpay_greenfield_py.models.withdrawal_result_data import WithdrawalResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -1034,7 +1034,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1046,12 +1046,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CustodiansApi(api_client)
+    api_instance = btcpay_greenfield_py.CustodiansApi(api_client)
     account_id = 'account_id_example' # str | The Custodian Account ID.
     store_id = 'store_id_example' # str | The Store ID
-    withdrawal_request_data = openapi_client.WithdrawalRequestData() # WithdrawalRequestData | 
+    withdrawal_request_data = btcpay_greenfield_py.WithdrawalRequestData() # WithdrawalRequestData | 
 
     try:
         # Withdraw to store wallet

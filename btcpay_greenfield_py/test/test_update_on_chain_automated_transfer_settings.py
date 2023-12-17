@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
+from btcpay_greenfield_py.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
 
 class TestUpdateOnChainAutomatedTransferSettings(unittest.TestCase):
     """UpdateOnChainAutomatedTransferSettings unit test stubs"""

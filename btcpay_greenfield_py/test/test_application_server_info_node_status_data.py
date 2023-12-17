@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.application_server_info_node_status_data import ApplicationServerInfoNodeStatusData
+from btcpay_greenfield_py.models.application_server_info_node_status_data import ApplicationServerInfoNodeStatusData
 
 class TestApplicationServerInfoNodeStatusData(unittest.TestCase):
     """ApplicationServerInfoNodeStatusData unit test stubs"""

@@ -1,4 +1,4 @@
-# openapi_client.PullPaymentsPayoutPublicApi
+# btcpay_greenfield_py.PullPaymentsPayoutPublicApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Get payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPayoutPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPayoutPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
     payout_id = 'payout_id_example' # str | The ID of the pull payment payout
 

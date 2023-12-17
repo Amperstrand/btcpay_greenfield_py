@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lock_user_request import LockUserRequest
+from btcpay_greenfield_py.models.lock_user_request import LockUserRequest
 
 class TestLockUserRequest(unittest.TestCase):
     """LockUserRequest unit test stubs"""

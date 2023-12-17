@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
+from btcpay_greenfield_py.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.checkout_options import CheckoutOptions
+from btcpay_greenfield_py.models.checkout_options import CheckoutOptions
 
 # TODO update the JSON string below
 json = "{}"

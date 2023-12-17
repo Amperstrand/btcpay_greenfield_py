@@ -1,4 +1,4 @@
-# openapi_client.CrowdfundApi
+# btcpay_greenfield_py.CrowdfundApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,15 +20,15 @@ Create a new Crowdfund app
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_crowdfund_app_request import CreateCrowdfundAppRequest
-from openapi_client.models.crowdfund_app_data import CrowdfundAppData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_crowdfund_app_request import CreateCrowdfundAppRequest
+from btcpay_greenfield_py.models.crowdfund_app_data import CrowdfundAppData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -38,7 +38,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -50,11 +50,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CrowdfundApi(api_client)
+    api_instance = btcpay_greenfield_py.CrowdfundApi(api_client)
     store_id = 'store_id_example' # str | The store ID
-    create_crowdfund_app_request = openapi_client.CreateCrowdfundAppRequest() # CreateCrowdfundAppRequest | 
+    create_crowdfund_app_request = btcpay_greenfield_py.CreateCrowdfundAppRequest() # CreateCrowdfundAppRequest | 
 
     try:
         # Create a new Crowdfund app
@@ -109,14 +109,14 @@ Returns crowdfund app data
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.crowdfund_app_data import CrowdfundAppData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.crowdfund_app_data import CrowdfundAppData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -126,7 +126,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -138,9 +138,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.CrowdfundApi(api_client)
+    api_instance = btcpay_greenfield_py.CrowdfundApi(api_client)
     app_id = 'app_id_example' # str | Crowdfund app ID
 
     try:

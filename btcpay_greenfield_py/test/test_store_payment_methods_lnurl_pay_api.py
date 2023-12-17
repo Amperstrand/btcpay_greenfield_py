@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.store_payment_methods_lnurl_pay_api import StorePaymentMethodsLNURLPayApi
+from btcpay_greenfield_py.api.store_payment_methods_lnurl_pay_api import StorePaymentMethodsLNURLPayApi
 
 
 class TestStorePaymentMethodsLNURLPayApi(unittest.TestCase):

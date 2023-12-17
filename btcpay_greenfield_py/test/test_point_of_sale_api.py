@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.point_of_sale_api import PointOfSaleApi
+from btcpay_greenfield_py.api.point_of_sale_api import PointOfSaleApi
 
 
 class TestPointOfSaleApi(unittest.TestCase):

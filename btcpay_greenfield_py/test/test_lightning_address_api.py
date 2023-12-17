@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.lightning_address_api import LightningAddressApi
+from btcpay_greenfield_py.api.lightning_address_api import LightningAddressApi
 
 
 class TestLightningAddressApi(unittest.TestCase):

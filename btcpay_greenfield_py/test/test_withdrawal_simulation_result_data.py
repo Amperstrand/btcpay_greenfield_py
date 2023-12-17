@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.withdrawal_simulation_result_data import WithdrawalSimulationResultData
+from btcpay_greenfield_py.models.withdrawal_simulation_result_data import WithdrawalSimulationResultData
 
 class TestWithdrawalSimulationResultData(unittest.TestCase):
     """WithdrawalSimulationResultData unit test stubs"""

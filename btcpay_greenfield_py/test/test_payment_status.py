@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.payment_status import PaymentStatus
+from btcpay_greenfield_py.models.payment_status import PaymentStatus
 
 class TestPaymentStatus(unittest.TestCase):
     """PaymentStatus unit test stubs"""

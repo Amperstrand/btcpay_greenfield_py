@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.store_rate_result import StoreRateResult
+from btcpay_greenfield_py.models.store_rate_result import StoreRateResult
 
 class TestStoreRateResult(unittest.TestCase):
     """StoreRateResult unit test stubs"""

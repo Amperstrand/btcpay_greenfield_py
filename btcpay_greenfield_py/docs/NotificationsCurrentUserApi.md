@@ -1,4 +1,4 @@
-# openapi_client.NotificationsCurrentUserApi
+# btcpay_greenfield_py.NotificationsCurrentUserApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Removes the specified notification.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,9 +52,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.NotificationsCurrentUserApi(api_client)
+    api_instance = btcpay_greenfield_py.NotificationsCurrentUserApi(api_client)
     id = 'id_example' # str | The notification to remove
 
     try:
@@ -108,14 +108,14 @@ View information about the specified notification
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.notification_data import NotificationData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.notification_data import NotificationData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -137,9 +137,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.NotificationsCurrentUserApi(api_client)
+    api_instance = btcpay_greenfield_py.NotificationsCurrentUserApi(api_client)
     id = 'id_example' # str | The notification to fetch
 
     try:
@@ -195,14 +195,14 @@ View current user's notifications
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.notification_data import NotificationData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.notification_data import NotificationData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -212,7 +212,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -224,9 +224,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.NotificationsCurrentUserApi(api_client)
+    api_instance = btcpay_greenfield_py.NotificationsCurrentUserApi(api_client)
     take = 3.4 # float | Number of records returned in response (optional)
     skip = 3.4 # float | Number of records to skip (optional)
     seen = 'seen_example' # str | filter by seen notifications (optional)
@@ -284,15 +284,15 @@ Updates the notification
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.notification_data import NotificationData
-from openapi_client.models.update_notification import UpdateNotification
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.notification_data import NotificationData
+from btcpay_greenfield_py.models.update_notification import UpdateNotification
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -302,7 +302,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -314,11 +314,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.NotificationsCurrentUserApi(api_client)
+    api_instance = btcpay_greenfield_py.NotificationsCurrentUserApi(api_client)
     id = 'id_example' # str | The notification to update
-    update_notification = openapi_client.UpdateNotification() # UpdateNotification | 
+    update_notification = btcpay_greenfield_py.UpdateNotification() # UpdateNotification | 
 
     try:
         # Update notification

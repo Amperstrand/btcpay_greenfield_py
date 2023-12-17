@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.custodians_api import CustodiansApi
+from btcpay_greenfield_py.api.custodians_api import CustodiansApi
 
 
 class TestCustodiansApi(unittest.TestCase):

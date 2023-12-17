@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.ledger_entry_data import LedgerEntryData
+from btcpay_greenfield_py.models.ledger_entry_data import LedgerEntryData
 
 # TODO update the JSON string below
 json = "{}"

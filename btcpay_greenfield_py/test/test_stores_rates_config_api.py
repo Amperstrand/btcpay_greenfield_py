@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.stores_rates_config_api import StoresRatesConfigApi
+from btcpay_greenfield_py.api.stores_rates_config_api import StoresRatesConfigApi
 
 
 class TestStoresRatesConfigApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lightning_node_balance_data_onchain import LightningNodeBalanceDataOnchain
+from btcpay_greenfield_py.models.lightning_node_balance_data_onchain import LightningNodeBalanceDataOnchain
 
 class TestLightningNodeBalanceDataOnchain(unittest.TestCase):
     """LightningNodeBalanceDataOnchain unit test stubs"""

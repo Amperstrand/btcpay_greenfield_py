@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.crowdfund_api import CrowdfundApi
+from btcpay_greenfield_py.api.crowdfund_api import CrowdfundApi
 
 
 class TestCrowdfundApi(unittest.TestCase):

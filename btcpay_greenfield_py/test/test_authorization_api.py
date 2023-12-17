@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.authorization_api import AuthorizationApi
+from btcpay_greenfield_py.api.authorization_api import AuthorizationApi
 
 
 class TestAuthorizationApi(unittest.TestCase):

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.add_on_chain_wallet_object_link_request import AddOnChainWalletObjectLinkRequest
+from btcpay_greenfield_py.models.add_on_chain_wallet_object_link_request import AddOnChainWalletObjectLinkRequest
 
 # TODO update the JSON string below
 json = "{}"

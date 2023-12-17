@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.label_data import LabelData
+from btcpay_greenfield_py.models.label_data import LabelData
 
 class TestLabelData(unittest.TestCase):
     """LabelData unit test stubs"""

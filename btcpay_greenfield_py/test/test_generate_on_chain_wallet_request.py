@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
+from btcpay_greenfield_py.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
 
 class TestGenerateOnChainWalletRequest(unittest.TestCase):
     """GenerateOnChainWalletRequest unit test stubs"""

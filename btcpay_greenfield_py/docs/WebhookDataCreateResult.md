@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.webhook_data_create_result import WebhookDataCreateResult
+from btcpay_greenfield_py.models.webhook_data_create_result import WebhookDataCreateResult
 
 # TODO update the JSON string below
 json = "{}"

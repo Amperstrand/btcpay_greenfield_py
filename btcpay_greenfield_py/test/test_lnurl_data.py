@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lnurl_data import LNURLData
+from btcpay_greenfield_py.models.lnurl_data import LNURLData
 
 class TestLNURLData(unittest.TestCase):
     """LNURLData unit test stubs"""

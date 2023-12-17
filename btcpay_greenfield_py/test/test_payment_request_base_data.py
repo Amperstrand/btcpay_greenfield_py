@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.payment_request_base_data import PaymentRequestBaseData
+from btcpay_greenfield_py.models.payment_request_base_data import PaymentRequestBaseData
 
 class TestPaymentRequestBaseData(unittest.TestCase):
     """PaymentRequestBaseData unit test stubs"""
@@ -46,7 +46,7 @@ class TestPaymentRequestBaseData(unittest.TestCase):
                 custom_css_link = '',
                 allow_custom_payment_amounts = True,
                 form_id = '',
-                form_response = openapi_client.models.form_response.formResponse()
+                form_response = btcpay_greenfield_py.models.form_response.formResponse()
             )
         else:
             return PaymentRequestBaseData(

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.invoice_data_base import InvoiceDataBase
+from btcpay_greenfield_py.models.invoice_data_base import InvoiceDataBase
 
 # TODO update the JSON string below
 json = "{}"

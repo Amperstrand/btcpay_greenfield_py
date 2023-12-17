@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoice_metadata import InvoiceMetadata
+from btcpay_greenfield_py.models.invoice_metadata import InvoiceMetadata
 
 class TestInvoiceMetadata(unittest.TestCase):
     """InvoiceMetadata unit test stubs"""

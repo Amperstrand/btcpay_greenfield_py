@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.onchain_balance_data import OnchainBalanceData
+from btcpay_greenfield_py.models.onchain_balance_data import OnchainBalanceData
 
 class TestOnchainBalanceData(unittest.TestCase):
     """OnchainBalanceData unit test stubs"""

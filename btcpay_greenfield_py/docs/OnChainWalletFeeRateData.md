@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.on_chain_wallet_fee_rate_data import OnChainWalletFeeRateData
+from btcpay_greenfield_py.models.on_chain_wallet_fee_rate_data import OnChainWalletFeeRateData
 
 # TODO update the JSON string below
 json = "{}"

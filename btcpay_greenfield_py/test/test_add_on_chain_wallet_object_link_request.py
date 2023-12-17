@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.add_on_chain_wallet_object_link_request import AddOnChainWalletObjectLinkRequest
+from btcpay_greenfield_py.models.add_on_chain_wallet_object_link_request import AddOnChainWalletObjectLinkRequest
 
 class TestAddOnChainWalletObjectLinkRequest(unittest.TestCase):
     """AddOnChainWalletObjectLinkRequest unit test stubs"""

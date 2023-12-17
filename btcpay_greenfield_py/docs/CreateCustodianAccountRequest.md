@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_custodian_account_request import CreateCustodianAccountRequest
+from btcpay_greenfield_py.models.create_custodian_account_request import CreateCustodianAccountRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.on_chain_wallet_address_data import OnChainWalletAddressData
+from btcpay_greenfield_py.models.on_chain_wallet_address_data import OnChainWalletAddressData
 
 # TODO update the JSON string below
 json = "{}"

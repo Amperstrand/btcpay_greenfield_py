@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_custodian_account_request import CreateCustodianAccountRequest
+from btcpay_greenfield_py.models.create_custodian_account_request import CreateCustodianAccountRequest
 
 class TestCreateCustodianAccountRequest(unittest.TestCase):
     """CreateCustodianAccountRequest unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
+from btcpay_greenfield_py.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
 
 class TestLNURLPayPaymentMethodData(unittest.TestCase):
     """LNURLPayPaymentMethodData unit test stubs"""

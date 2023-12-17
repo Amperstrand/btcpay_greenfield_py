@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
+from btcpay_greenfield_py.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
 
 class TestLightningAutomatedTransferSettings(unittest.TestCase):
     """LightningAutomatedTransferSettings unit test stubs"""

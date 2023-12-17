@@ -1,4 +1,4 @@
-# openapi_client.StoresPayoutsApi
+# btcpay_greenfield_py.StoresPayoutsApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,14 +27,14 @@ Get payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -44,7 +44,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -56,9 +56,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     payout_id = 'payout_id_example' # str | The ID of the payout
     store_id = 'store_id_example' # str | The ID of the store
 
@@ -115,15 +115,15 @@ Create a new payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_payout_through_store_request import CreatePayoutThroughStoreRequest
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_payout_through_store_request import CreatePayoutThroughStoreRequest
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -133,7 +133,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -145,11 +145,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     store_id = 'store_id_example' # str | The ID of the store
-    create_payout_through_store_request = openapi_client.CreatePayoutThroughStoreRequest() # CreatePayoutThroughStoreRequest | 
+    create_payout_through_store_request = btcpay_greenfield_py.CreatePayoutThroughStoreRequest() # CreatePayoutThroughStoreRequest | 
 
     try:
         # Create Payout
@@ -206,15 +206,15 @@ Approve a payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.models.pull_payments_approve_payout_request import PullPaymentsApprovePayoutRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.models.pull_payments_approve_payout_request import PullPaymentsApprovePayoutRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -224,7 +224,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -236,12 +236,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     payout_id = 'payout_id_example' # str | The ID of the payout
     store_id = 'store_id_example' # str | The ID of the store
-    pull_payments_approve_payout_request = openapi_client.PullPaymentsApprovePayoutRequest() # PullPaymentsApprovePayoutRequest |  (optional)
+    pull_payments_approve_payout_request = btcpay_greenfield_py.PullPaymentsApprovePayoutRequest() # PullPaymentsApprovePayoutRequest |  (optional)
 
     try:
         # Approve Payout
@@ -299,13 +299,13 @@ Cancel the payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -315,7 +315,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -327,9 +327,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     payout_id = 'payout_id_example' # str | The ID of the payout
     store_id = 'store_id_example' # str | The ID of the store
 
@@ -382,22 +382,22 @@ Get payouts
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     store_id = 'store_id_example' # str | The ID of the store
     include_cancelled = False # bool | Whether this should list cancelled payouts (optional) (default to False)
 
@@ -454,14 +454,14 @@ Mark a payout with a state
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.pull_payments_mark_payout_request import PullPaymentsMarkPayoutRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.pull_payments_mark_payout_request import PullPaymentsMarkPayoutRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -471,7 +471,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -483,12 +483,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     payout_id = 'payout_id_example' # str | The ID of the payout
     store_id = 'store_id_example' # str | The ID of the store
-    pull_payments_mark_payout_request = openapi_client.PullPaymentsMarkPayoutRequest() # PullPaymentsMarkPayoutRequest |  (optional)
+    pull_payments_mark_payout_request = btcpay_greenfield_py.PullPaymentsMarkPayoutRequest() # PullPaymentsMarkPayoutRequest |  (optional)
 
     try:
         # Mark Payout
@@ -544,13 +544,13 @@ Mark a payout as paid
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -560,7 +560,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -572,9 +572,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutsApi(api_client)
     payout_id = 'payout_id_example' # str | The ID of the payout
     store_id = 'store_id_example' # str | The ID of the store
 

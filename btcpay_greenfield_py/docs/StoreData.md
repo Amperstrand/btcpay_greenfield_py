@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.store_data import StoreData
+from btcpay_greenfield_py.models.store_data import StoreData
 
 # TODO update the JSON string below
 json = "{}"

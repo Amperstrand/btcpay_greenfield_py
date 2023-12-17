@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.webhook_invoice_invalid_event import WebhookInvoiceInvalidEvent
+from btcpay_greenfield_py.models.webhook_invoice_invalid_event import WebhookInvoiceInvalidEvent
 
 class TestWebhookInvoiceInvalidEvent(unittest.TestCase):
     """WebhookInvoiceInvalidEvent unit test stubs"""

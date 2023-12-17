@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lightning_invoice_data import LightningInvoiceData
+from btcpay_greenfield_py.models.lightning_invoice_data import LightningInvoiceData
 
 class TestLightningInvoiceData(unittest.TestCase):
     """LightningInvoiceData unit test stubs"""

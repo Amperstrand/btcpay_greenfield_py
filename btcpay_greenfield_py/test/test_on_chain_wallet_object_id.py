@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.on_chain_wallet_object_id import OnChainWalletObjectId
+from btcpay_greenfield_py.models.on_chain_wallet_object_id import OnChainWalletObjectId
 
 class TestOnChainWalletObjectId(unittest.TestCase):
     """OnChainWalletObjectId unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoice_payment_method_data_model_additional_data_any_of import InvoicePaymentMethodDataModelAdditionalDataAnyOf
+from btcpay_greenfield_py.models.invoice_payment_method_data_model_additional_data_any_of import InvoicePaymentMethodDataModelAdditionalDataAnyOf
 
 class TestInvoicePaymentMethodDataModelAdditionalDataAnyOf(unittest.TestCase):
     """InvoicePaymentMethodDataModelAdditionalDataAnyOf unit test stubs"""

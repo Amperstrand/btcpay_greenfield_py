@@ -1,4 +1,4 @@
-# openapi_client.MiscelleneousApi
+# btcpay_greenfield_py.MiscelleneousApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,22 +22,22 @@ View available rate providers that you can use in stores
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MiscelleneousApi(api_client)
+    api_instance = btcpay_greenfield_py.MiscelleneousApi(api_client)
 
     try:
         # Get available rate sources
@@ -86,21 +86,21 @@ View the checkout page of an invoice
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MiscelleneousApi(api_client)
+    api_instance = btcpay_greenfield_py.MiscelleneousApi(api_client)
     invoice_id = 'invoice_id_example' # str | The invoice id
     lang = 'lang_example' # str | The preferred language of the checkout page. You can use \"auto\" to use the language of the customer's browser or see the list of language codes with [this operation](#operation/langCodes). (optional)
 
@@ -152,22 +152,22 @@ The supported language codes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lang_codes200_response_inner import LangCodes200ResponseInner
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lang_codes200_response_inner import LangCodes200ResponseInner
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MiscelleneousApi(api_client)
+    api_instance = btcpay_greenfield_py.MiscelleneousApi(api_client)
 
     try:
         # Language codes
@@ -216,22 +216,22 @@ The metadata of available permissions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MiscelleneousApi(api_client)
+    api_instance = btcpay_greenfield_py.MiscelleneousApi(api_client)
 
     try:
         # Permissions metadata

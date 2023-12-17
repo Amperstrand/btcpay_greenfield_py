@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.quote_result_data import QuoteResultData
+from btcpay_greenfield_py.models.quote_result_data import QuoteResultData
 
 class TestQuoteResultData(unittest.TestCase):
     """QuoteResultData unit test stubs"""

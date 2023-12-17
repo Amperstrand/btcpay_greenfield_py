@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.webhook_data import WebhookData
+from btcpay_greenfield_py.models.webhook_data import WebhookData
 
 # TODO update the JSON string below
 json = "{}"

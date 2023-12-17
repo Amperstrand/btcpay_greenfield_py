@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patch_on_chain_transaction_request import PatchOnChainTransactionRequest
+from btcpay_greenfield_py.models.patch_on_chain_transaction_request import PatchOnChainTransactionRequest
 
 # TODO update the JSON string below
 json = "{}"

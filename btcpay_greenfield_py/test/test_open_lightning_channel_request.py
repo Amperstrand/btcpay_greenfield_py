@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.open_lightning_channel_request import OpenLightningChannelRequest
+from btcpay_greenfield_py.models.open_lightning_channel_request import OpenLightningChannelRequest
 
 class TestOpenLightningChannelRequest(unittest.TestCase):
     """OpenLightningChannelRequest unit test stubs"""

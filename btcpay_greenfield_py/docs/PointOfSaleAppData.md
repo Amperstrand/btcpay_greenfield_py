@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.point_of_sale_app_data import PointOfSaleAppData
+from btcpay_greenfield_py.models.point_of_sale_app_data import PointOfSaleAppData
 
 # TODO update the JSON string below
 json = "{}"

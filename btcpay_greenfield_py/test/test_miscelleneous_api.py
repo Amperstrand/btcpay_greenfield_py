@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.miscelleneous_api import MiscelleneousApi
+from btcpay_greenfield_py.api.miscelleneous_api import MiscelleneousApi
 
 
 class TestMiscelleneousApi(unittest.TestCase):

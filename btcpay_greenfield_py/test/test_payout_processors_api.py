@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.payout_processors_api import PayoutProcessorsApi
+from btcpay_greenfield_py.api.payout_processors_api import PayoutProcessorsApi
 
 
 class TestPayoutProcessorsApi(unittest.TestCase):

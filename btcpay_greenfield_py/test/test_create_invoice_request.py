@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_invoice_request import CreateInvoiceRequest
+from btcpay_greenfield_py.models.create_invoice_request import CreateInvoiceRequest
 
 class TestCreateInvoiceRequest(unittest.TestCase):
     """CreateInvoiceRequest unit test stubs"""

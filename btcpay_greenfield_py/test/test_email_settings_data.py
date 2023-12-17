@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.email_settings_data import EmailSettingsData
+from btcpay_greenfield_py.models.email_settings_data import EmailSettingsData
 
 class TestEmailSettingsData(unittest.TestCase):
     """EmailSettingsData unit test stubs"""

@@ -1,4 +1,4 @@
-# openapi_client.LightningInternalNodeApi
+# btcpay_greenfield_py.LightningInternalNodeApi
 
 All URIs are relative to *http://localhost*
 
@@ -32,14 +32,14 @@ Connect to another lightning node.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.connect_to_node_request import ConnectToNodeRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.connect_to_node_request import ConnectToNodeRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -49,7 +49,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -61,11 +61,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
-    connect_to_node_request = openapi_client.ConnectToNodeRequest() # ConnectToNodeRequest | 
+    connect_to_node_request = btcpay_greenfield_py.ConnectToNodeRequest() # ConnectToNodeRequest | 
 
     try:
         # Connect to lightning node
@@ -121,15 +121,15 @@ Create a lightning invoice.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_lightning_invoice_request import CreateLightningInvoiceRequest
-from openapi_client.models.lightning_invoice_data import LightningInvoiceData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_lightning_invoice_request import CreateLightningInvoiceRequest
+from btcpay_greenfield_py.models.lightning_invoice_data import LightningInvoiceData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -139,7 +139,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -151,11 +151,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
-    create_lightning_invoice_request = openapi_client.CreateLightningInvoiceRequest() # CreateLightningInvoiceRequest | 
+    create_lightning_invoice_request = btcpay_greenfield_py.CreateLightningInvoiceRequest() # CreateLightningInvoiceRequest | 
 
     try:
         # Create lightning invoice
@@ -212,14 +212,14 @@ View balance of the lightning node
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_node_balance_data import LightningNodeBalanceData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_node_balance_data import LightningNodeBalanceData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -229,7 +229,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -241,9 +241,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
 
     try:
@@ -299,14 +299,14 @@ View information about the current channels of the lightning node
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_channel_data import LightningChannelData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_channel_data import LightningChannelData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -316,7 +316,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -328,9 +328,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
 
     try:
@@ -385,13 +385,13 @@ Get an on-chain deposit address for the lightning node
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -401,7 +401,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -413,9 +413,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
 
     try:
@@ -471,14 +471,14 @@ View information about the lightning node
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_node_information_data import LightningNodeInformationData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_node_information_data import LightningNodeInformationData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -488,7 +488,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -500,9 +500,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
 
     try:
@@ -558,14 +558,14 @@ View information about the requested lightning invoice
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_invoice_data import LightningInvoiceData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_invoice_data import LightningInvoiceData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -575,7 +575,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -587,9 +587,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
     id = 'id_example' # str | The id of the lightning invoice.
 
@@ -647,14 +647,14 @@ View information about the lightning invoices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_invoice_data import LightningInvoiceData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_invoice_data import LightningInvoiceData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -664,7 +664,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -676,9 +676,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
     pending_only = False # bool | Limit to pending invoices only (optional) (default to False)
     offset_index = 0 # float | The index of an invoice that will be used as the start of the list (optional) (default to 0)
@@ -739,14 +739,14 @@ View information about the requested lightning payment
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_payment_data import LightningPaymentData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_payment_data import LightningPaymentData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -756,7 +756,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -768,9 +768,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
     payment_hash = 'payment_hash_example' # str | The payment hash of the lightning payment.
 
@@ -828,14 +828,14 @@ View information about the lightning payments
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_payment_data import LightningPaymentData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_payment_data import LightningPaymentData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -845,7 +845,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -857,9 +857,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
     include_pending = False # bool | Also include pending payments (optional) (default to False)
     offset_index = 0 # float | The index of a payment that will be used as the start of the list (optional) (default to 0)
@@ -920,14 +920,14 @@ Open a channel with another lightning node. You should connect to that node firs
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.open_lightning_channel_request import OpenLightningChannelRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.open_lightning_channel_request import OpenLightningChannelRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -937,7 +937,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -949,11 +949,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
-    open_lightning_channel_request = openapi_client.OpenLightningChannelRequest() # OpenLightningChannelRequest | 
+    open_lightning_channel_request = btcpay_greenfield_py.OpenLightningChannelRequest() # OpenLightningChannelRequest | 
 
     try:
         # Open channel
@@ -1008,15 +1008,15 @@ Pay a lightning invoice. In case the payment response times out, the status will
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_payment_data import LightningPaymentData
-from openapi_client.models.pay_lightning_invoice_request import PayLightningInvoiceRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_payment_data import LightningPaymentData
+from btcpay_greenfield_py.models.pay_lightning_invoice_request import PayLightningInvoiceRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -1026,7 +1026,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -1038,11 +1038,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.LightningInternalNodeApi(api_client)
+    api_instance = btcpay_greenfield_py.LightningInternalNodeApi(api_client)
     crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
-    pay_lightning_invoice_request = openapi_client.PayLightningInvoiceRequest() # PayLightningInvoiceRequest | 
+    pay_lightning_invoice_request = btcpay_greenfield_py.PayLightningInvoiceRequest() # PayLightningInvoiceRequest | 
 
     try:
         # Pay Lightning Invoice

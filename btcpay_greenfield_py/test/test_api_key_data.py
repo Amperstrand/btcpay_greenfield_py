@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.api_key_data import ApiKeyData
+from btcpay_greenfield_py.models.api_key_data import ApiKeyData
 
 class TestApiKeyData(unittest.TestCase):
     """ApiKeyData unit test stubs"""

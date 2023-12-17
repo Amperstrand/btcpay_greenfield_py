@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.payment_request_base_data import PaymentRequestBaseData
+from btcpay_greenfield_py.models.payment_request_base_data import PaymentRequestBaseData
 
 # TODO update the JSON string below
 json = "{}"

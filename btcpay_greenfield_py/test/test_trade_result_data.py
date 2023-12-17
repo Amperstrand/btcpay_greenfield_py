@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.trade_result_data import TradeResultData
+from btcpay_greenfield_py.models.trade_result_data import TradeResultData
 
 class TestTradeResultData(unittest.TestCase):
     """TradeResultData unit test stubs"""

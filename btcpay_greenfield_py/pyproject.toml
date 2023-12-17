@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "openapi_client"
+name = "btcpay_greenfield_py"
 version = "1.0.0"
 description = "BTCPay Greenfield API"
 authors = ["BTCPay Server <team@openapitools.org>"]
@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "BTCPay Greenfield API"]
-include = ["openapi_client/py.typed"]
+include = ["btcpay_greenfield_py/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

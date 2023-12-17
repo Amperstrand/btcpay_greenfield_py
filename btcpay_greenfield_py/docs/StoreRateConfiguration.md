@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.store_rate_configuration import StoreRateConfiguration
+from btcpay_greenfield_py.models.store_rate_configuration import StoreRateConfiguration
 
 # TODO update the JSON string below
 json = "{}"

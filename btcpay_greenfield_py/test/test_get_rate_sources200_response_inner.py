@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
+from btcpay_greenfield_py.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
 
 class TestGetRateSources200ResponseInner(unittest.TestCase):
     """GetRateSources200ResponseInner unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.on_chain_payment_method_data import OnChainPaymentMethodData
+from btcpay_greenfield_py.models.on_chain_payment_method_data import OnChainPaymentMethodData
 
 class TestOnChainPaymentMethodData(unittest.TestCase):
     """OnChainPaymentMethodData unit test stubs"""

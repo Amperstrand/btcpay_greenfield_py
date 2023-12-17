@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.on_chain_wallet_utxo_data import OnChainWalletUTXOData
+from btcpay_greenfield_py.models.on_chain_wallet_utxo_data import OnChainWalletUTXOData
 
 class TestOnChainWalletUTXOData(unittest.TestCase):
     """OnChainWalletUTXOData unit test stubs"""

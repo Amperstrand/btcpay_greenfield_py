@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_lightning_invoice_request import CreateLightningInvoiceRequest
+from btcpay_greenfield_py.models.create_lightning_invoice_request import CreateLightningInvoiceRequest
 
 # TODO update the JSON string below
 json = "{}"

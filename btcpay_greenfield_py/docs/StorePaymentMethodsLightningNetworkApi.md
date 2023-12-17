@@ -1,4 +1,4 @@
-# openapi_client.StorePaymentMethodsLightningNetworkApi
+# btcpay_greenfield_py.StorePaymentMethodsLightningNetworkApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Removes the specified store payment method.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,9 +52,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLightningNetworkApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLightningNetworkApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -111,14 +111,14 @@ View information about the specified payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -128,7 +128,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -140,9 +140,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLightningNetworkApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLightningNetworkApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -200,14 +200,14 @@ View information about the stores' configured Lightning Network payment methods
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -217,7 +217,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -229,9 +229,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLightningNetworkApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLightningNetworkApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
     enabled = True # bool | Fetch payment methods that are enabled/disabled only (optional)
 
@@ -289,15 +289,15 @@ Update the specified store's payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
-from openapi_client.models.update_lightning_network_payment_method_request import UpdateLightningNetworkPaymentMethodRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_network_payment_method_data import LightningNetworkPaymentMethodData
+from btcpay_greenfield_py.models.update_lightning_network_payment_method_request import UpdateLightningNetworkPaymentMethodRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -307,7 +307,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -319,12 +319,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLightningNetworkApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLightningNetworkApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
-    update_lightning_network_payment_method_request = openapi_client.UpdateLightningNetworkPaymentMethodRequest() # UpdateLightningNetworkPaymentMethodRequest | 
+    update_lightning_network_payment_method_request = btcpay_greenfield_py.UpdateLightningNetworkPaymentMethodRequest() # UpdateLightningNetworkPaymentMethodRequest | 
 
     try:
         # Update store Lightning Network payment method

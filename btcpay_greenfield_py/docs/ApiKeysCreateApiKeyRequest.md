@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
+from btcpay_greenfield_py.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
 
 # TODO update the JSON string below
 json = "{}"

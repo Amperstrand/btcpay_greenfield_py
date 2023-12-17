@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.server_info_api import ServerInfoApi
+from btcpay_greenfield_py.api.server_info_api import ServerInfoApi
 
 
 class TestServerInfoApi(unittest.TestCase):

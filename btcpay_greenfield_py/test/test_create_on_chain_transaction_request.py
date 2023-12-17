@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_on_chain_transaction_request import CreateOnChainTransactionRequest
+from btcpay_greenfield_py.models.create_on_chain_transaction_request import CreateOnChainTransactionRequest
 
 class TestCreateOnChainTransactionRequest(unittest.TestCase):
     """CreateOnChainTransactionRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestCreateOnChainTransactionRequest(unittest.TestCase):
         if include_optional:
             return CreateOnChainTransactionRequest(
                 destinations = [
-                    openapi_client.models.create_on_chain_transaction_request_destination.CreateOnChainTransactionRequestDestination(
+                    btcpay_greenfield_py.models.create_on_chain_transaction_request_destination.CreateOnChainTransactionRequestDestination(
                         destination = '', 
                         amount = '', 
                         subtract_from_amount = True, )

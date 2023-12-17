@@ -1,4 +1,4 @@
-# openapi_client.StoresEmailApi
+# btcpay_greenfield_py.StoresEmailApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,14 +23,14 @@ View email settings of the specified store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.email_settings_data import EmailSettingsData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.email_settings_data import EmailSettingsData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,9 +52,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresEmailApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresEmailApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
 
     try:
@@ -110,14 +110,14 @@ Send an email using the store's SMTP server
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.email_data import EmailData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.email_data import EmailData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -127,7 +127,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -139,11 +139,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresEmailApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresEmailApi(api_client)
     store_id = 'store_id_example' # str | The store to send the email from
-    email_data = openapi_client.EmailData() # EmailData | 
+    email_data = btcpay_greenfield_py.EmailData() # EmailData | 
 
     try:
         # Send an email for a store
@@ -198,14 +198,14 @@ Update a store's email settings
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.email_settings_data import EmailSettingsData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.email_settings_data import EmailSettingsData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -215,7 +215,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -227,11 +227,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresEmailApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresEmailApi(api_client)
     store_id = 'store_id_example' # str | The store to update
-    email_settings_data = openapi_client.EmailSettingsData() # EmailSettingsData | 
+    email_settings_data = btcpay_greenfield_py.EmailSettingsData() # EmailSettingsData | 
 
     try:
         # Update store email settings

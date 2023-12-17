@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoices_refund_request import InvoicesRefundRequest
+from btcpay_greenfield_py.models.invoices_refund_request import InvoicesRefundRequest
 
 class TestInvoicesRefundRequest(unittest.TestCase):
     """InvoicesRefundRequest unit test stubs"""

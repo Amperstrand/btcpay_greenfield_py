@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
+from btcpay_greenfield_py.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
 
 class TestPermissionsMetadata200ResponseInner(unittest.TestCase):
     """PermissionsMetadata200ResponseInner unit test stubs"""

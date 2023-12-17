@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.crowdfund_app_data import CrowdfundAppData
+from btcpay_greenfield_py.models.crowdfund_app_data import CrowdfundAppData
 
 class TestCrowdfundAppData(unittest.TestCase):
     """CrowdfundAppData unit test stubs"""

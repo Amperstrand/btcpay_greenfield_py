@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.notifications_current_user_api import NotificationsCurrentUserApi
+from btcpay_greenfield_py.api.notifications_current_user_api import NotificationsCurrentUserApi
 
 
 class TestNotificationsCurrentUserApi(unittest.TestCase):

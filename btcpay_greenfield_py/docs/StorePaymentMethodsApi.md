@@ -1,4 +1,4 @@
-# openapi_client.StorePaymentMethodsApi
+# btcpay_greenfield_py.StorePaymentMethodsApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,14 +21,14 @@ View information about the stores' configured payment methods
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.generic_payment_method_data import GenericPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.generic_payment_method_data import GenericPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -38,7 +38,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -50,9 +50,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
     enabled = True # bool | Fetch payment methods that are enabled/disabled only (optional)
 

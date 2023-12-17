@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.on_chain_wallet_object_data import OnChainWalletObjectData
+from btcpay_greenfield_py.models.on_chain_wallet_object_data import OnChainWalletObjectData
 
 # TODO update the JSON string below
 json = "{}"

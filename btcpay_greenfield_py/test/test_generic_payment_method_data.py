@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.generic_payment_method_data import GenericPaymentMethodData
+from btcpay_greenfield_py.models.generic_payment_method_data import GenericPaymentMethodData
 
 class TestGenericPaymentMethodData(unittest.TestCase):
     """GenericPaymentMethodData unit test stubs"""
@@ -38,7 +38,7 @@ class TestGenericPaymentMethodData(unittest.TestCase):
             return GenericPaymentMethodData(
                 enabled = True,
                 crypto_code = '',
-                data = openapi_client.models.generic_payment_method_data_data.GenericPaymentMethodData_data()
+                data = btcpay_greenfield_py.models.generic_payment_method_data_data.GenericPaymentMethodData_data()
             )
         else:
             return GenericPaymentMethodData(

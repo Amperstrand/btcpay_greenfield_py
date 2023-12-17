@@ -1,4 +1,4 @@
-# openapi_client.PaymentRequestsApi
+# btcpay_greenfield_py.PaymentRequestsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,13 +26,13 @@ Archives the specified payment request.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -42,7 +42,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -54,9 +54,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     payment_request_id = 'payment_request_id_example' # str | The payment request to remove
     store_id = 'store_id_example' # str | The store the payment request belongs to
 
@@ -113,15 +113,15 @@ Create a new payment request
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payment_request_base_data import PaymentRequestBaseData
-from openapi_client.models.payment_request_data import PaymentRequestData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payment_request_base_data import PaymentRequestBaseData
+from btcpay_greenfield_py.models.payment_request_data import PaymentRequestData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -131,7 +131,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -143,11 +143,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     store_id = 'store_id_example' # str | The store to query
-    payment_request_base_data = openapi_client.PaymentRequestBaseData() # PaymentRequestBaseData | 
+    payment_request_base_data = btcpay_greenfield_py.PaymentRequestBaseData() # PaymentRequestBaseData | 
 
     try:
         # Create a new payment request
@@ -203,14 +203,14 @@ View information about the specified payment request
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payment_request_data import PaymentRequestData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payment_request_data import PaymentRequestData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -220,7 +220,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -232,9 +232,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     payment_request_id = 'payment_request_id_example' # str | The payment request to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -292,14 +292,14 @@ View information about the existing payment requests
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payment_request_data import PaymentRequestData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payment_request_data import PaymentRequestData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -309,7 +309,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -321,9 +321,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     store_id = 'store_id_example' # str | The store to query
 
     try:
@@ -378,15 +378,15 @@ Create a new invoice for the payment request, or reuse an existing one
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.invoice_data import InvoiceData
-from openapi_client.models.payment_requests_pay_request import PaymentRequestsPayRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.invoice_data import InvoiceData
+from btcpay_greenfield_py.models.payment_requests_pay_request import PaymentRequestsPayRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -396,7 +396,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -408,12 +408,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     payment_request_id = 'payment_request_id_example' # str | The payment request to create
     store_id = 'store_id_example' # str | The store to fetch
-    payment_requests_pay_request = openapi_client.PaymentRequestsPayRequest() # PaymentRequestsPayRequest | Invoice creation request (optional)
+    payment_requests_pay_request = btcpay_greenfield_py.PaymentRequestsPayRequest() # PaymentRequestsPayRequest | Invoice creation request (optional)
 
     try:
         # Create a new invoice for the payment request
@@ -470,15 +470,15 @@ Update a payment request
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payment_request_base_data import PaymentRequestBaseData
-from openapi_client.models.payment_request_data import PaymentRequestData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payment_request_base_data import PaymentRequestBaseData
+from btcpay_greenfield_py.models.payment_request_data import PaymentRequestData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -488,7 +488,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -500,12 +500,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PaymentRequestsApi(api_client)
+    api_instance = btcpay_greenfield_py.PaymentRequestsApi(api_client)
     payment_request_id = 'payment_request_id_example' # str | The payment request to update
     store_id = 'store_id_example' # str | The store to query
-    payment_request_base_data = openapi_client.PaymentRequestBaseData() # PaymentRequestBaseData | 
+    payment_request_base_data = btcpay_greenfield_py.PaymentRequestBaseData() # PaymentRequestBaseData | 
 
     try:
         # Update payment request

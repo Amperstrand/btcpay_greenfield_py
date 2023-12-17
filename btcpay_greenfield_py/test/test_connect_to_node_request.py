@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.connect_to_node_request import ConnectToNodeRequest
+from btcpay_greenfield_py.models.connect_to_node_request import ConnectToNodeRequest
 
 class TestConnectToNodeRequest(unittest.TestCase):
     """ConnectToNodeRequest unit test stubs"""

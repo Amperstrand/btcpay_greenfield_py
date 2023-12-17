@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.webhook_data_base_authorized_events import WebhookDataBaseAuthorizedEvents
+from btcpay_greenfield_py.models.webhook_data_base_authorized_events import WebhookDataBaseAuthorizedEvents
 
 class TestWebhookDataBaseAuthorizedEvents(unittest.TestCase):
     """WebhookDataBaseAuthorizedEvents unit test stubs"""

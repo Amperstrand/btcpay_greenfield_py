@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.store_payment_methods_lightning_network_api import StorePaymentMethodsLightningNetworkApi
+from btcpay_greenfield_py.api.store_payment_methods_lightning_network_api import StorePaymentMethodsLightningNetworkApi
 
 
 class TestStorePaymentMethodsLightningNetworkApi(unittest.TestCase):

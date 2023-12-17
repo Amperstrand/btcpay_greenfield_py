@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.webhook_invoice_payment_settled_event import WebhookInvoicePaymentSettledEvent
+from btcpay_greenfield_py.models.webhook_invoice_payment_settled_event import WebhookInvoicePaymentSettledEvent
 
 # TODO update the JSON string below
 json = "{}"

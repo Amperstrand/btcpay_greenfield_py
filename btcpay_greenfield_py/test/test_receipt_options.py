@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.receipt_options import ReceiptOptions
+from btcpay_greenfield_py.models.receipt_options import ReceiptOptions
 
 class TestReceiptOptions(unittest.TestCase):
     """ReceiptOptions unit test stubs"""

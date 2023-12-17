@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.on_chain_wallet_object_data import OnChainWalletObjectData
+from btcpay_greenfield_py.models.on_chain_wallet_object_data import OnChainWalletObjectData
 
 class TestOnChainWalletObjectData(unittest.TestCase):
     """OnChainWalletObjectData unit test stubs"""
@@ -38,7 +38,7 @@ class TestOnChainWalletObjectData(unittest.TestCase):
             return OnChainWalletObjectData(
                 data = { },
                 links = [
-                    openapi_client.models.on_chain_wallet_object_link.OnChainWalletObjectLink(
+                    btcpay_greenfield_py.models.on_chain_wallet_object_link.OnChainWalletObjectLink(
                         type = '', 
                         id = '', 
                         link_data = { }, 

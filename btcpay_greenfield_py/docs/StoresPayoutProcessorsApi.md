@@ -1,4 +1,4 @@
-# openapi_client.StoresPayoutProcessorsApi
+# btcpay_greenfield_py.StoresPayoutProcessorsApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,14 +29,14 @@ Get configured store Lightning automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -46,7 +46,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -58,9 +58,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     payment_method = 'payment_method_example' # str | A specific payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -118,14 +118,14 @@ Get configured store Lightning automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -135,7 +135,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -147,9 +147,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
 
     try:
@@ -205,15 +205,15 @@ Update configured store Lightning automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
-from openapi_client.models.update_lightning_automated_transfer_settings import UpdateLightningAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
+from btcpay_greenfield_py.models.update_lightning_automated_transfer_settings import UpdateLightningAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -223,7 +223,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -235,12 +235,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     payment_method = 'payment_method_example' # str | A specific payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
-    update_lightning_automated_transfer_settings = openapi_client.UpdateLightningAutomatedTransferSettings() # UpdateLightningAutomatedTransferSettings | 
+    update_lightning_automated_transfer_settings = btcpay_greenfield_py.UpdateLightningAutomatedTransferSettings() # UpdateLightningAutomatedTransferSettings | 
 
     try:
         # Update configured store Lightning automated payout processors
@@ -297,14 +297,14 @@ Get configured store onchain automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -314,7 +314,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -326,9 +326,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     payment_method = 'payment_method_example' # str | A specific payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -386,14 +386,14 @@ Get configured store onchain automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -403,7 +403,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -415,9 +415,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
 
     try:
@@ -473,15 +473,15 @@ Update configured store onchain automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
-from openapi_client.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
+from btcpay_greenfield_py.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -491,7 +491,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -503,12 +503,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     payment_method = 'payment_method_example' # str | A specific payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
-    update_on_chain_automated_transfer_settings = openapi_client.UpdateOnChainAutomatedTransferSettings() # UpdateOnChainAutomatedTransferSettings | 
+    update_on_chain_automated_transfer_settings = btcpay_greenfield_py.UpdateOnChainAutomatedTransferSettings() # UpdateOnChainAutomatedTransferSettings | 
 
     try:
         # Update configured store onchain automated payout processors
@@ -565,15 +565,15 @@ Update configured store onchain automated payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
-from openapi_client.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
+from btcpay_greenfield_py.models.update_on_chain_automated_transfer_settings import UpdateOnChainAutomatedTransferSettings
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -583,7 +583,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -595,11 +595,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
-    update_on_chain_automated_transfer_settings = openapi_client.UpdateOnChainAutomatedTransferSettings() # UpdateOnChainAutomatedTransferSettings | 
+    update_on_chain_automated_transfer_settings = btcpay_greenfield_py.UpdateOnChainAutomatedTransferSettings() # UpdateOnChainAutomatedTransferSettings | 
 
     try:
         # Update configured store onchain automated payout processors
@@ -655,14 +655,14 @@ Get store configured payout processors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_processor_data import PayoutProcessorData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_processor_data import PayoutProcessorData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -672,7 +672,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -684,9 +684,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
 
     try:
@@ -742,13 +742,13 @@ Remove store configured payout processor
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -758,7 +758,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -770,9 +770,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresPayoutProcessorsApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresPayoutProcessorsApi(api_client)
     payment_method = 'payment_method_example' # str | The payment method
     processor = 'processor_example' # str | The processor
     store_id = 'store_id_example' # str | The store

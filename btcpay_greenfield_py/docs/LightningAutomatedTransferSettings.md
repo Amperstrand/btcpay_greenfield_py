@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
+from btcpay_greenfield_py.models.lightning_automated_transfer_settings import LightningAutomatedTransferSettings
 
 # TODO update the JSON string below
 json = "{}"

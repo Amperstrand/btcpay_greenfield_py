@@ -1,4 +1,4 @@
-# openapi_client.PullPaymentsPublicApi
+# btcpay_greenfield_py.PullPaymentsPublicApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,25 +23,25 @@ Create a new payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_payout_request import CreatePayoutRequest
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.create_payout_request import CreatePayoutRequest
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
-    create_payout_request = openapi_client.CreatePayoutRequest() # CreatePayoutRequest | 
+    create_payout_request = btcpay_greenfield_py.CreatePayoutRequest() # CreatePayoutRequest | 
 
     try:
         # Create Payout
@@ -96,22 +96,22 @@ Get payout
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
     payout_id = 'payout_id_example' # str | The ID of the pull payment payout
 
@@ -166,22 +166,22 @@ Get payouts
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.payout_data import PayoutData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.payout_data import PayoutData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
     include_cancelled = False # bool | Whether this should list cancelled payouts (optional) (default to False)
 
@@ -236,22 +236,22 @@ Get a pull payment
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.pull_payment_data import PullPaymentData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.pull_payment_data import PullPaymentData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
 
     try:
@@ -304,22 +304,22 @@ Get Pull Payment LNURL details
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lnurl_data import LNURLData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lnurl_data import LNURLData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.PullPaymentsPublicApi(api_client)
+    api_instance = btcpay_greenfield_py.PullPaymentsPublicApi(api_client)
     pull_payment_id = 'pull_payment_id_example' # str | The ID of the pull payment
 
     try:

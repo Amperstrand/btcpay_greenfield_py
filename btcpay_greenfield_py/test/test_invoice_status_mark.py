@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoice_status_mark import InvoiceStatusMark
+from btcpay_greenfield_py.models.invoice_status_mark import InvoiceStatusMark
 
 class TestInvoiceStatusMark(unittest.TestCase):
     """InvoiceStatusMark unit test stubs"""

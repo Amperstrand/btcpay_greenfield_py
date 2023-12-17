@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.pull_payments_approve_payout_request import PullPaymentsApprovePayoutRequest
+from btcpay_greenfield_py.models.pull_payments_approve_payout_request import PullPaymentsApprovePayoutRequest
 
 class TestPullPaymentsApprovePayoutRequest(unittest.TestCase):
     """PullPaymentsApprovePayoutRequest unit test stubs"""

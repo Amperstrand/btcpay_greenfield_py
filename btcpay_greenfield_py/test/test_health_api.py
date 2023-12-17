@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.health_api import HealthApi
+from btcpay_greenfield_py.api.health_api import HealthApi
 
 
 class TestHealthApi(unittest.TestCase):

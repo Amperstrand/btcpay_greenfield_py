@@ -1,4 +1,4 @@
-# openapi_client.WebhooksApi
+# btcpay_greenfield_py.WebhooksApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,15 +29,15 @@ Create a new webhook
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_data_create import WebhookDataCreate
-from openapi_client.models.webhook_data_create_result import WebhookDataCreateResult
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_data_create import WebhookDataCreate
+from btcpay_greenfield_py.models.webhook_data_create_result import WebhookDataCreateResult
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -47,7 +47,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -59,11 +59,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
-    webhook_data_create = openapi_client.WebhookDataCreate() # WebhookDataCreate | 
+    webhook_data_create = btcpay_greenfield_py.WebhookDataCreate() # WebhookDataCreate | 
 
     try:
         # Create a new webhook
@@ -118,13 +118,13 @@ Delete a webhook
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -134,7 +134,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -146,9 +146,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
 
@@ -203,14 +203,14 @@ View webhook of a store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_data import WebhookData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_data import WebhookData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -220,7 +220,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -232,9 +232,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
 
@@ -291,14 +291,14 @@ List the latest deliveries to the webhook, ordered from the most recent
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_delivery_data import WebhookDeliveryData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_delivery_data import WebhookDeliveryData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -308,7 +308,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -320,9 +320,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
     count = 'count_example' # str | The number of latest deliveries to fetch (optional)
@@ -381,14 +381,14 @@ Information about a webhook delivery
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_delivery_data import WebhookDeliveryData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_delivery_data import WebhookDeliveryData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -398,7 +398,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -410,9 +410,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     delivery_id = 'delivery_id_example' # str | The id of the delivery
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
@@ -471,13 +471,13 @@ The delivery's JSON request sent to the endpoint
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -487,7 +487,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -499,9 +499,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     delivery_id = 'delivery_id_example' # str | The id of the delivery
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
@@ -561,14 +561,14 @@ View webhooks of a store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_data import WebhookData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_data import WebhookData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -578,7 +578,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -590,9 +590,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
 
     try:
@@ -647,13 +647,13 @@ Redeliver the delivery
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -663,7 +663,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -675,9 +675,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     delivery_id = 'delivery_id_example' # str | The id of the delivery
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
@@ -737,15 +737,15 @@ Update a webhook
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.webhook_data import WebhookData
-from openapi_client.models.webhook_data_update import WebhookDataUpdate
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.webhook_data import WebhookData
+from btcpay_greenfield_py.models.webhook_data_update import WebhookDataUpdate
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -755,7 +755,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -767,12 +767,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WebhooksApi(api_client)
+    api_instance = btcpay_greenfield_py.WebhooksApi(api_client)
     store_id = 'store_id_example' # str | The store id
     webhook_id = 'webhook_id_example' # str | The webhook id
-    webhook_data_update = openapi_client.WebhookDataUpdate() # WebhookDataUpdate | 
+    webhook_data_update = btcpay_greenfield_py.WebhookDataUpdate() # WebhookDataUpdate | 
 
     try:
         # Update a webhook

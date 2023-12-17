@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.custodians_get_store_custodian_account_deposit_address200_response import CustodiansGetStoreCustodianAccountDepositAddress200Response
+from btcpay_greenfield_py.models.custodians_get_store_custodian_account_deposit_address200_response import CustodiansGetStoreCustodianAccountDepositAddress200Response
 
 class TestCustodiansGetStoreCustodianAccountDepositAddress200Response(unittest.TestCase):
     """CustodiansGetStoreCustodianAccountDepositAddress200Response unit test stubs"""

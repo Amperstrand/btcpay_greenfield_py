@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.application_server_info_sync_status_data import ApplicationServerInfoSyncStatusData
+from btcpay_greenfield_py.models.application_server_info_sync_status_data import ApplicationServerInfoSyncStatusData
 
 # TODO update the JSON string below
 json = "{}"

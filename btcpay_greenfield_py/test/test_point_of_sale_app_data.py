@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.point_of_sale_app_data import PointOfSaleAppData
+from btcpay_greenfield_py.models.point_of_sale_app_data import PointOfSaleAppData
 
 class TestPointOfSaleAppData(unittest.TestCase):
     """PointOfSaleAppData unit test stubs"""

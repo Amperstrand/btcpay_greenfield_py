@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.speed_policy import SpeedPolicy
+from btcpay_greenfield_py.models.speed_policy import SpeedPolicy
 
 class TestSpeedPolicy(unittest.TestCase):
     """SpeedPolicy unit test stubs"""

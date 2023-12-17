@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.store_wallet_on_chain_api import StoreWalletOnChainApi
+from btcpay_greenfield_py.api.store_wallet_on_chain_api import StoreWalletOnChainApi
 
 
 class TestStoreWalletOnChainApi(unittest.TestCase):

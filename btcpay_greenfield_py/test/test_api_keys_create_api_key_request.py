@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
+from btcpay_greenfield_py.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
 
 class TestApiKeysCreateApiKeyRequest(unittest.TestCase):
     """ApiKeysCreateApiKeyRequest unit test stubs"""

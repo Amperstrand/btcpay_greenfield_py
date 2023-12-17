@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.ledger_entry_data import LedgerEntryData
+from btcpay_greenfield_py.models.ledger_entry_data import LedgerEntryData
 
 class TestLedgerEntryData(unittest.TestCase):
     """LedgerEntryData unit test stubs"""

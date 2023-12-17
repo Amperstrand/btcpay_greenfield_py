@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoice_payment_method_data_model import InvoicePaymentMethodDataModel
+from btcpay_greenfield_py.models.invoice_payment_method_data_model import InvoicePaymentMethodDataModel
 
 class TestInvoicePaymentMethodDataModel(unittest.TestCase):
     """InvoicePaymentMethodDataModel unit test stubs"""
@@ -47,7 +47,7 @@ class TestInvoicePaymentMethodDataModel(unittest.TestCase):
                 amount = '',
                 network_fee = '',
                 payments = [
-                    openapi_client.models.payment.Payment(
+                    btcpay_greenfield_py.models.payment.Payment(
                         id = '', 
                         received_date = null, 
                         value = '', 

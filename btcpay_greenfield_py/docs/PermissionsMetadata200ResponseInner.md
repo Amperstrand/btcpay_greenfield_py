@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
+from btcpay_greenfield_py.models.permissions_metadata200_response_inner import PermissionsMetadata200ResponseInner
 
 # TODO update the JSON string below
 json = "{}"

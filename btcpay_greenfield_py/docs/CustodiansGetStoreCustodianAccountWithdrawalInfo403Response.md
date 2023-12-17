@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.custodians_get_store_custodian_account_withdrawal_info403_response import CustodiansGetStoreCustodianAccountWithdrawalInfo403Response
+from btcpay_greenfield_py.models.custodians_get_store_custodian_account_withdrawal_info403_response import CustodiansGetStoreCustodianAccountWithdrawalInfo403Response
 
 # TODO update the JSON string below
 json = "{}"

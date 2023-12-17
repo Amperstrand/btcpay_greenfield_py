@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.pull_payments_create_pull_payment_request import PullPaymentsCreatePullPaymentRequest
+from btcpay_greenfield_py.models.pull_payments_create_pull_payment_request import PullPaymentsCreatePullPaymentRequest
 
 class TestPullPaymentsCreatePullPaymentRequest(unittest.TestCase):
     """PullPaymentsCreatePullPaymentRequest unit test stubs"""

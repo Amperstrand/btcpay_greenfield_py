@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.store_on_chain_payment_methods_poston_chain_payment_method_preview_request import StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest
+from btcpay_greenfield_py.models.store_on_chain_payment_methods_poston_chain_payment_method_preview_request import StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.problem_details import ProblemDetails
+from btcpay_greenfield_py.models.problem_details import ProblemDetails
 
 # TODO update the JSON string below
 json = "{}"

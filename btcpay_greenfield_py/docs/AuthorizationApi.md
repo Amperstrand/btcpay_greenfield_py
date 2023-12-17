@@ -1,4 +1,4 @@
-# openapi_client.AuthorizationApi
+# btcpay_greenfield_py.AuthorizationApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,21 +19,21 @@ Redirect the browser to this endpoint to request the user to generate an api-key
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AuthorizationApi(api_client)
+    api_instance = btcpay_greenfield_py.AuthorizationApi(api_client)
     permissions = ['permissions_example'] # List[str] | The permissions to request. (See API Key authentication) (optional)
     strict = True # bool | If permissions are specified, and strict is set to false, it will allow the user to reject some of permissions the application is requesting. (optional) (default to True)
     application_identifier = 'application_identifier_example' # str | If specified, BTCPay Server will check if there is an existing API key associated with the user that also has this application identifier, redirect host AND the permissions required match(takes selectiveStores and strict into account). `applicationIdentifier` is ignored if redirect is not specified. (optional)

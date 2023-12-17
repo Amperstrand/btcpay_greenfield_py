@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lang_codes200_response_inner import LangCodes200ResponseInner
+from btcpay_greenfield_py.models.lang_codes200_response_inner import LangCodes200ResponseInner
 
 class TestLangCodes200ResponseInner(unittest.TestCase):
     """LangCodes200ResponseInner unit test stubs"""

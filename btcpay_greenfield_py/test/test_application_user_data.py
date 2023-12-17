@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.application_user_data import ApplicationUserData
+from btcpay_greenfield_py.models.application_user_data import ApplicationUserData
 
 class TestApplicationUserData(unittest.TestCase):
     """ApplicationUserData unit test stubs"""

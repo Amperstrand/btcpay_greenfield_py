@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.role_data import RoleData
+from btcpay_greenfield_py.models.role_data import RoleData
 
 class TestRoleData(unittest.TestCase):
     """RoleData unit test stubs"""

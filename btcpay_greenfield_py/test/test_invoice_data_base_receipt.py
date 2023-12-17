@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.invoice_data_base_receipt import InvoiceDataBaseReceipt
+from btcpay_greenfield_py.models.invoice_data_base_receipt import InvoiceDataBaseReceipt
 
 class TestInvoiceDataBaseReceipt(unittest.TestCase):
     """InvoiceDataBaseReceipt unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.pull_payments_payout_public_api import PullPaymentsPayoutPublicApi
+from btcpay_greenfield_py.api.pull_payments_payout_public_api import PullPaymentsPayoutPublicApi
 
 
 class TestPullPaymentsPayoutPublicApi(unittest.TestCase):

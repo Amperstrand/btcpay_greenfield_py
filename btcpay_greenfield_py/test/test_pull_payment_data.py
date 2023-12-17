@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.pull_payment_data import PullPaymentData
+from btcpay_greenfield_py.models.pull_payment_data import PullPaymentData
 
 class TestPullPaymentData(unittest.TestCase):
     """PullPaymentData unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.update_lightning_network_payment_method_request import UpdateLightningNetworkPaymentMethodRequest
+from btcpay_greenfield_py.models.update_lightning_network_payment_method_request import UpdateLightningNetworkPaymentMethodRequest
 
 class TestUpdateLightningNetworkPaymentMethodRequest(unittest.TestCase):
     """UpdateLightningNetworkPaymentMethodRequest unit test stubs"""

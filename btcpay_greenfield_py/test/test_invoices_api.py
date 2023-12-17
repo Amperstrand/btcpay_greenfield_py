@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.invoices_api import InvoicesApi
+from btcpay_greenfield_py.api.invoices_api import InvoicesApi
 
 
 class TestInvoicesApi(unittest.TestCase):

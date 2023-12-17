@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_payout_through_store_request import CreatePayoutThroughStoreRequest
+from btcpay_greenfield_py.models.create_payout_through_store_request import CreatePayoutThroughStoreRequest
 
 class TestCreatePayoutThroughStoreRequest(unittest.TestCase):
     """CreatePayoutThroughStoreRequest unit test stubs"""

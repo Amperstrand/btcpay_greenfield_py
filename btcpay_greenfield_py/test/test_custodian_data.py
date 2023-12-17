@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.custodian_data import CustodianData
+from btcpay_greenfield_py.models.custodian_data import CustodianData
 
 class TestCustodianData(unittest.TestCase):
     """CustodianData unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.custodians_get_store_custodian_account_withdrawal_info403_response import CustodiansGetStoreCustodianAccountWithdrawalInfo403Response
+from btcpay_greenfield_py.models.custodians_get_store_custodian_account_withdrawal_info403_response import CustodiansGetStoreCustodianAccountWithdrawalInfo403Response
 
 class TestCustodiansGetStoreCustodianAccountWithdrawalInfo403Response(unittest.TestCase):
     """CustodiansGetStoreCustodianAccountWithdrawalInfo403Response unit test stubs"""

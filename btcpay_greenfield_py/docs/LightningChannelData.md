@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.lightning_channel_data import LightningChannelData
+from btcpay_greenfield_py.models.lightning_channel_data import LightningChannelData
 
 # TODO update the JSON string below
 json = "{}"

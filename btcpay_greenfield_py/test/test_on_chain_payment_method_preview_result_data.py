@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
+from btcpay_greenfield_py.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
 
 class TestOnChainPaymentMethodPreviewResultData(unittest.TestCase):
     """OnChainPaymentMethodPreviewResultData unit test stubs"""
@@ -37,7 +37,7 @@ class TestOnChainPaymentMethodPreviewResultData(unittest.TestCase):
         if include_optional:
             return OnChainPaymentMethodPreviewResultData(
                 addresses = [
-                    openapi_client.models.on_chain_payment_method_preview_result_address_item.OnChainPaymentMethodPreviewResultAddressItem(
+                    btcpay_greenfield_py.models.on_chain_payment_method_preview_result_address_item.OnChainPaymentMethodPreviewResultAddressItem(
                         key_path = '', 
                         address = '', )
                     ]

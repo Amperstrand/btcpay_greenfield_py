@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.webhooks_api import WebhooksApi
+from btcpay_greenfield_py.api.webhooks_api import WebhooksApi
 
 
 class TestWebhooksApi(unittest.TestCase):

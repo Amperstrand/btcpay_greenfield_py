@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
+from btcpay_greenfield_py.models.on_chain_automated_transfer_settings import OnChainAutomatedTransferSettings
 
 # TODO update the JSON string below
 json = "{}"

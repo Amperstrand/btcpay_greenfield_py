@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.update_notification import UpdateNotification
+from btcpay_greenfield_py.models.update_notification import UpdateNotification
 
 class TestUpdateNotification(unittest.TestCase):
     """UpdateNotification unit test stubs"""

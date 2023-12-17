@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.connect_to_node_request import ConnectToNodeRequest
+from btcpay_greenfield_py.models.connect_to_node_request import ConnectToNodeRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.lightning_address_data import LightningAddressData
+from btcpay_greenfield_py.models.lightning_address_data import LightningAddressData
 
 class TestLightningAddressData(unittest.TestCase):
     """LightningAddressData unit test stubs"""

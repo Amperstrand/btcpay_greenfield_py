@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_crowdfund_app_request import CreateCrowdfundAppRequest
+from btcpay_greenfield_py.models.create_crowdfund_app_request import CreateCrowdfundAppRequest
 
 # TODO update the JSON string below
 json = "{}"

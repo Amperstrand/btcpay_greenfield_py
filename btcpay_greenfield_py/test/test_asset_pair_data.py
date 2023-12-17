@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.asset_pair_data import AssetPairData
+from btcpay_greenfield_py.models.asset_pair_data import AssetPairData
 
 class TestAssetPairData(unittest.TestCase):
     """AssetPairData unit test stubs"""

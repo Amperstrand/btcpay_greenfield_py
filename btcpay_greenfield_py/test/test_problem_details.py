@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.problem_details import ProblemDetails
+from btcpay_greenfield_py.models.problem_details import ProblemDetails
 
 class TestProblemDetails(unittest.TestCase):
     """ProblemDetails unit test stubs"""

@@ -1,4 +1,4 @@
-# openapi_client.APIKeysApi
+# btcpay_greenfield_py.APIKeysApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Create a new API Key
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.api_key_data import ApiKeyData
-from openapi_client.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.api_key_data import ApiKeyData
+from btcpay_greenfield_py.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -44,7 +44,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -56,10 +56,10 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
-    api_keys_create_api_key_request = openapi_client.ApiKeysCreateApiKeyRequest() # ApiKeysCreateApiKeyRequest |  (optional)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
+    api_keys_create_api_key_request = btcpay_greenfield_py.ApiKeysCreateApiKeyRequest() # ApiKeysCreateApiKeyRequest |  (optional)
 
     try:
         # Create a new API Key
@@ -114,15 +114,15 @@ Create a new API Key for a user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.api_key_data import ApiKeyData
-from openapi_client.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.api_key_data import ApiKeyData
+from btcpay_greenfield_py.models.api_keys_create_api_key_request import ApiKeysCreateApiKeyRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -132,7 +132,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -144,11 +144,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
     id_or_email = 'id_or_email_example' # str | The target user's id or email
-    api_keys_create_api_key_request = openapi_client.ApiKeysCreateApiKeyRequest() # ApiKeysCreateApiKeyRequest |  (optional)
+    api_keys_create_api_key_request = btcpay_greenfield_py.ApiKeysCreateApiKeyRequest() # ApiKeysCreateApiKeyRequest |  (optional)
 
     try:
         # Create a new API Key for a user
@@ -204,13 +204,13 @@ Revoke the current API key so that it cannot be used anymore
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -220,7 +220,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -232,9 +232,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
     apikey = 'apikey_example' # str | The API Key to revoke
 
     try:
@@ -286,14 +286,14 @@ Revoke the current API key so that it cannot be used anymore
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.api_key_data import ApiKeyData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.api_key_data import ApiKeyData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -309,9 +309,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
 
     try:
         # Revoke the current API Key
@@ -362,13 +362,13 @@ Revoke the API key of a target user so that it cannot be used anymore
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -378,7 +378,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -390,9 +390,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
     apikey = 'apikey_example' # str | The API Key to revoke
     id_or_email = 'id_or_email_example' # str | The target user's id or email
 
@@ -447,14 +447,14 @@ View information about the current API key
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.api_key_data import ApiKeyData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.api_key_data import ApiKeyData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -464,7 +464,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -476,9 +476,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.APIKeysApi(api_client)
+    api_instance = btcpay_greenfield_py.APIKeysApi(api_client)
 
     try:
         # Get the current API Key information

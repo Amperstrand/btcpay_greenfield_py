@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
+from btcpay_greenfield_py.models.get_rate_sources200_response_inner import GetRateSources200ResponseInner
 
 # TODO update the JSON string below
 json = "{}"

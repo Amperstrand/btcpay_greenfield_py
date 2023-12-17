@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.payment_requests_api import PaymentRequestsApi
+from btcpay_greenfield_py.api.payment_requests_api import PaymentRequestsApi
 
 
 class TestPaymentRequestsApi(unittest.TestCase):

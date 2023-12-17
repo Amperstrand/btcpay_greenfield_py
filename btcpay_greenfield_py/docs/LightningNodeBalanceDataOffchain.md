@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.lightning_node_balance_data_offchain import LightningNodeBalanceDataOffchain
+from btcpay_greenfield_py.models.lightning_node_balance_data_offchain import LightningNodeBalanceDataOffchain
 
 # TODO update the JSON string below
 json = "{}"

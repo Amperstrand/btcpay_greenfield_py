@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.store_on_chain_wallets_create_on_chain_transaction200_response import StoreOnChainWalletsCreateOnChainTransaction200Response
+from btcpay_greenfield_py.models.store_on_chain_wallets_create_on_chain_transaction200_response import StoreOnChainWalletsCreateOnChainTransaction200Response
 
 class TestStoreOnChainWalletsCreateOnChainTransaction200Response(unittest.TestCase):
     """StoreOnChainWalletsCreateOnChainTransaction200Response unit test stubs"""

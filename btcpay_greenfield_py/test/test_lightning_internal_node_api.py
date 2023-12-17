@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.lightning_internal_node_api import LightningInternalNodeApi
+from btcpay_greenfield_py.api.lightning_internal_node_api import LightningInternalNodeApi
 
 
 class TestLightningInternalNodeApi(unittest.TestCase):

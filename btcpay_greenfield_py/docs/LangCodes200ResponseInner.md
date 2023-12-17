@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.lang_codes200_response_inner import LangCodes200ResponseInner
+from btcpay_greenfield_py.models.lang_codes200_response_inner import LangCodes200ResponseInner
 
 # TODO update the JSON string below
 json = "{}"

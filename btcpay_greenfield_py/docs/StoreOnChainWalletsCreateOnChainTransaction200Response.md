@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.store_on_chain_wallets_create_on_chain_transaction200_response import StoreOnChainWalletsCreateOnChainTransaction200Response
+from btcpay_greenfield_py.models.store_on_chain_wallets_create_on_chain_transaction200_response import StoreOnChainWalletsCreateOnChainTransaction200Response
 
 # TODO update the JSON string below
 json = "{}"

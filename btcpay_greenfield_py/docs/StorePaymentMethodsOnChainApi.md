@@ -1,4 +1,4 @@
-# openapi_client.StorePaymentMethodsOnChainApi
+# btcpay_greenfield_py.StorePaymentMethodsOnChainApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,13 +27,13 @@ Removes the specified store payment method.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -43,7 +43,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -55,9 +55,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -114,15 +114,15 @@ Generate a wallet and update the specified store's payment method to it
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
-from openapi_client.models.on_chain_payment_method_data_with_sensitive_data import OnChainPaymentMethodDataWithSensitiveData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.generate_on_chain_wallet_request import GenerateOnChainWalletRequest
+from btcpay_greenfield_py.models.on_chain_payment_method_data_with_sensitive_data import OnChainPaymentMethodDataWithSensitiveData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -132,7 +132,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -144,12 +144,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
-    generate_on_chain_wallet_request = openapi_client.GenerateOnChainWalletRequest() # GenerateOnChainWalletRequest | 
+    generate_on_chain_wallet_request = btcpay_greenfield_py.GenerateOnChainWalletRequest() # GenerateOnChainWalletRequest | 
 
     try:
         # Generate store on-chain wallet
@@ -207,14 +207,14 @@ View information about the specified payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_payment_method_data import OnChainPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_payment_method_data import OnChainPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -224,7 +224,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -236,9 +236,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -296,14 +296,14 @@ View addresses of the current payment method of the store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -313,7 +313,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -325,9 +325,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
     offset = 3.4 # float | From which index to fetch the addresses (optional)
@@ -389,14 +389,14 @@ View information about the stores' configured on-chain payment methods
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_payment_method_data import OnChainPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_payment_method_data import OnChainPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -406,7 +406,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -418,9 +418,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
     enabled = True # bool | Fetch payment methods that are enabled/disabled only (optional)
 
@@ -478,15 +478,15 @@ View addresses of a proposed payment method of the store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
-from openapi_client.models.store_on_chain_payment_methods_poston_chain_payment_method_preview_request import StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_payment_method_preview_result_data import OnChainPaymentMethodPreviewResultData
+from btcpay_greenfield_py.models.store_on_chain_payment_methods_poston_chain_payment_method_preview_request import StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -496,7 +496,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -508,12 +508,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
-    store_on_chain_payment_methods_poston_chain_payment_method_preview_request = openapi_client.StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest() # StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest | 
+    store_on_chain_payment_methods_poston_chain_payment_method_preview_request = btcpay_greenfield_py.StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest() # StoreOnChainPaymentMethodsPOSTOnChainPaymentMethodPreviewRequest | 
     offset = 3.4 # float | From which index to fetch the addresses (optional)
     amount = 3.4 # float | Number of addresses to preview (optional)
 
@@ -574,15 +574,15 @@ Update the specified store's payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.on_chain_payment_method_data import OnChainPaymentMethodData
-from openapi_client.models.update_on_chain_payment_method_request import UpdateOnChainPaymentMethodRequest
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.on_chain_payment_method_data import OnChainPaymentMethodData
+from btcpay_greenfield_py.models.update_on_chain_payment_method_request import UpdateOnChainPaymentMethodRequest
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -592,7 +592,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -604,12 +604,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsOnChainApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsOnChainApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
-    update_on_chain_payment_method_request = openapi_client.UpdateOnChainPaymentMethodRequest() # UpdateOnChainPaymentMethodRequest | 
+    update_on_chain_payment_method_request = btcpay_greenfield_py.UpdateOnChainPaymentMethodRequest() # UpdateOnChainPaymentMethodRequest | 
 
     try:
         # Update store on-chain payment method

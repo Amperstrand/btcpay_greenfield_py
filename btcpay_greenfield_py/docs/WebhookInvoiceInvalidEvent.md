@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.webhook_invoice_invalid_event import WebhookInvoiceInvalidEvent
+from btcpay_greenfield_py.models.webhook_invoice_invalid_event import WebhookInvoiceInvalidEvent
 
 # TODO update the JSON string below
 json = "{}"

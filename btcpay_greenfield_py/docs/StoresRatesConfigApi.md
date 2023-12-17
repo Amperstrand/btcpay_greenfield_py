@@ -1,4 +1,4 @@
-# openapi_client.StoresRatesConfigApi
+# btcpay_greenfield_py.StoresRatesConfigApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,14 +23,14 @@ View rate settings of the specified store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.store_rate_configuration import StoreRateConfiguration
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.store_rate_configuration import StoreRateConfiguration
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,9 +52,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresRatesConfigApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresRatesConfigApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
 
     try:
@@ -110,15 +110,15 @@ Preview rate configuration results before you set it on the store
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.store_rate_configuration import StoreRateConfiguration
-from openapi_client.models.store_rate_result import StoreRateResult
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.store_rate_configuration import StoreRateConfiguration
+from btcpay_greenfield_py.models.store_rate_result import StoreRateResult
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -128,7 +128,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -140,11 +140,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresRatesConfigApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresRatesConfigApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
-    store_rate_configuration = openapi_client.StoreRateConfiguration() # StoreRateConfiguration | 
+    store_rate_configuration = btcpay_greenfield_py.StoreRateConfiguration() # StoreRateConfiguration | 
     currency_pair = ['currency_pair_example'] # List[str] | The currency pairs to preview (optional)
 
     try:
@@ -202,14 +202,14 @@ Update a store's rate settings
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.store_rate_configuration import StoreRateConfiguration
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.store_rate_configuration import StoreRateConfiguration
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -219,7 +219,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -231,11 +231,11 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StoresRatesConfigApi(api_client)
+    api_instance = btcpay_greenfield_py.StoresRatesConfigApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
-    store_rate_configuration = openapi_client.StoreRateConfiguration() # StoreRateConfiguration | 
+    store_rate_configuration = btcpay_greenfield_py.StoreRateConfiguration() # StoreRateConfiguration | 
 
     try:
         # Update store rate settings

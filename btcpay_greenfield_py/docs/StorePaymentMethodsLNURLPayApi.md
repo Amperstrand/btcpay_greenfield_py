@@ -1,4 +1,4 @@
-# openapi_client.StorePaymentMethodsLNURLPayApi
+# btcpay_greenfield_py.StorePaymentMethodsLNURLPayApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,13 +24,13 @@ Removes the specified store payment method.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -52,9 +52,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLNURLPayApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLNURLPayApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -111,14 +111,14 @@ View information about the specified payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -128,7 +128,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -140,9 +140,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLNURLPayApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLNURLPayApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to fetch
     store_id = 'store_id_example' # str | The store to fetch
 
@@ -201,14 +201,14 @@ View information about the stores' configured LNURL payment methods
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -218,7 +218,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -230,9 +230,9 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLNURLPayApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLNURLPayApi(api_client)
     store_id = 'store_id_example' # str | The store to fetch
     enabled = True # bool | Fetch payment methods that are enabled/disabled only (optional)
 
@@ -290,14 +290,14 @@ Update the specified store's payment method
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
-from openapi_client.rest import ApiException
+import btcpay_greenfield_py
+from btcpay_greenfield_py.models.lnurl_pay_payment_method_data import LNURLPayPaymentMethodData
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     host = "http://localhost"
 )
 
@@ -307,7 +307,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic
-configuration = openapi_client.Configuration(
+configuration = btcpay_greenfield_py.Configuration(
     username = os.environ["USERNAME"],
     password = os.environ["PASSWORD"]
 )
@@ -319,12 +319,12 @@ configuration.api_key['API_Key'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['API_Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorePaymentMethodsLNURLPayApi(api_client)
+    api_instance = btcpay_greenfield_py.StorePaymentMethodsLNURLPayApi(api_client)
     crypto_code = 'BTC' # str | The crypto code of the payment method to update
     store_id = 'store_id_example' # str | The store to fetch
-    lnurl_pay_payment_method_data = openapi_client.LNURLPayPaymentMethodData() # LNURLPayPaymentMethodData | 
+    lnurl_pay_payment_method_data = btcpay_greenfield_py.LNURLPayPaymentMethodData() # LNURLPayPaymentMethodData | 
 
     try:
         # Update store LNURL Pay payment method

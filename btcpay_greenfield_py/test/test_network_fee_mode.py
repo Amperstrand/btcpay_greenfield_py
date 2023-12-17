@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.network_fee_mode import NetworkFeeMode
+from btcpay_greenfield_py.models.network_fee_mode import NetworkFeeMode
 
 class TestNetworkFeeMode(unittest.TestCase):
     """NetworkFeeMode unit test stubs"""

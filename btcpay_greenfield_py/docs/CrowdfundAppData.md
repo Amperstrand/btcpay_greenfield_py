@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.crowdfund_app_data import CrowdfundAppData
+from btcpay_greenfield_py.models.crowdfund_app_data import CrowdfundAppData
 
 # TODO update the JSON string below
 json = "{}"

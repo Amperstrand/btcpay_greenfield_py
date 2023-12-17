@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.users_create_user_request import UsersCreateUserRequest
+from btcpay_greenfield_py.models.users_create_user_request import UsersCreateUserRequest
 
 class TestUsersCreateUserRequest(unittest.TestCase):
     """UsersCreateUserRequest unit test stubs"""

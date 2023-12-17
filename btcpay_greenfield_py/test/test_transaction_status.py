@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.transaction_status import TransactionStatus
+from btcpay_greenfield_py.models.transaction_status import TransactionStatus
 
 class TestTransactionStatus(unittest.TestCase):
     """TransactionStatus unit test stubs"""

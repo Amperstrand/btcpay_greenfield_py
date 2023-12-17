@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "openapi-client"
+NAME = "btcpay_greenfield_py-greenfield-client"
 VERSION = "1.0.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
@@ -46,5 +46,5 @@ setup(
     long_description="""\
     A full API to use your BTCPay Server
     """,  # noqa: E501
-    package_data={"openapi_client": ["py.typed"]},
+    package_data={"btcpay_greenfield_py": ["py.typed"]},
 )

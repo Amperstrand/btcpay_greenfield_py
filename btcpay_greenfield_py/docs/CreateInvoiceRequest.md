@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_invoice_request import CreateInvoiceRequest
+from btcpay_greenfield_py.models.create_invoice_request import CreateInvoiceRequest
 
 # TODO update the JSON string below
 json = "{}"

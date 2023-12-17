@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.custodian_account_data import CustodianAccountData
+from btcpay_greenfield_py.models.custodian_account_data import CustodianAccountData
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.payout_processor_data import PayoutProcessorData
+from btcpay_greenfield_py.models.payout_processor_data import PayoutProcessorData
 
 class TestPayoutProcessorData(unittest.TestCase):
     """PayoutProcessorData unit test stubs"""

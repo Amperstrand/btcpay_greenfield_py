@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.application_server_info_data import ApplicationServerInfoData
+from btcpay_greenfield_py.models.application_server_info_data import ApplicationServerInfoData
 
 class TestApplicationServerInfoData(unittest.TestCase):
     """ApplicationServerInfoData unit test stubs"""
@@ -43,9 +43,9 @@ class TestApplicationServerInfoData(unittest.TestCase):
                     ],
                 fully_synched = True,
                 sync_status = [
-                    openapi_client.models.application_server_info_sync_status_data.ApplicationServerInfoSyncStatusData(
+                    btcpay_greenfield_py.models.application_server_info_sync_status_data.ApplicationServerInfoSyncStatusData(
                         crypto_code = 'BTC', 
-                        node_information = openapi_client.models.application_server_info_node_status_data.ApplicationServerInfoNodeStatusData(
+                        node_information = btcpay_greenfield_py.models.application_server_info_node_status_data.ApplicationServerInfoNodeStatusData(
                             headers = 56, 
                             blocks = 56, 
                             verification_progress = 0, ), 

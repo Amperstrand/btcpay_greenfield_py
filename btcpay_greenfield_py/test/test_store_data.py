@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.store_data import StoreData
+from btcpay_greenfield_py.models.store_data import StoreData
 
 class TestStoreData(unittest.TestCase):
     """StoreData unit test stubs"""
@@ -71,7 +71,7 @@ class TestStoreData(unittest.TestCase):
                 lazy_payment_methods = True,
                 default_payment_method = '',
                 payment_method_criteria = [
-                    openapi_client.models.payment_method_criteria_data.PaymentMethodCriteriaData(
+                    btcpay_greenfield_py.models.payment_method_criteria_data.PaymentMethodCriteriaData(
                         payment_method = null, 
                         currency_code = 'USD', 
                         amount = '', 

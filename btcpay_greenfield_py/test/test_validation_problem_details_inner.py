@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.validation_problem_details_inner import ValidationProblemDetailsInner
+from btcpay_greenfield_py.models.validation_problem_details_inner import ValidationProblemDetailsInner
 
 class TestValidationProblemDetailsInner(unittest.TestCase):
     """ValidationProblemDetailsInner unit test stubs"""

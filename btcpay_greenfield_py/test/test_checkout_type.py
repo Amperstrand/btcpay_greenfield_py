@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.checkout_type import CheckoutType
+from btcpay_greenfield_py.models.checkout_type import CheckoutType
 
 class TestCheckoutType(unittest.TestCase):
     """CheckoutType unit test stubs"""
