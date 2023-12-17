@@ -1,0 +1,1114 @@
+# openapi_client.LightningStoreApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**store_lightning_node_api_connect_to_node**](LightningStoreApi.md#store_lightning_node_api_connect_to_node) | **POST** /api/v1/stores/{storeId}/lightning/{cryptoCode}/connect | Connect to lightning node
+[**store_lightning_node_api_create_invoice**](LightningStoreApi.md#store_lightning_node_api_create_invoice) | **POST** /api/v1/stores/{storeId}/lightning/{cryptoCode}/invoices | Create lightning invoice
+[**store_lightning_node_api_get_balance**](LightningStoreApi.md#store_lightning_node_api_get_balance) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/balance | Get node balance
+[**store_lightning_node_api_get_channels**](LightningStoreApi.md#store_lightning_node_api_get_channels) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/channels | Get channels
+[**store_lightning_node_api_get_deposit_address**](LightningStoreApi.md#store_lightning_node_api_get_deposit_address) | **POST** /api/v1/stores/{storeId}/lightning/{cryptoCode}/address | Get deposit address
+[**store_lightning_node_api_get_info**](LightningStoreApi.md#store_lightning_node_api_get_info) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/info | Get node information
+[**store_lightning_node_api_get_invoice**](LightningStoreApi.md#store_lightning_node_api_get_invoice) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/invoices/{id} | Get invoice
+[**store_lightning_node_api_get_invoices**](LightningStoreApi.md#store_lightning_node_api_get_invoices) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/invoices | Get invoices
+[**store_lightning_node_api_get_payment**](LightningStoreApi.md#store_lightning_node_api_get_payment) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/payments/{paymentHash} | Get payment
+[**store_lightning_node_api_get_payments**](LightningStoreApi.md#store_lightning_node_api_get_payments) | **GET** /api/v1/stores/{storeId}/lightning/{cryptoCode}/payments | Get payments
+[**store_lightning_node_api_open_channel**](LightningStoreApi.md#store_lightning_node_api_open_channel) | **POST** /api/v1/stores/{storeId}/lightning/{cryptoCode}/channels | Open channel
+[**store_lightning_node_api_pay_invoice**](LightningStoreApi.md#store_lightning_node_api_pay_invoice) | **POST** /api/v1/stores/{storeId}/lightning/{cryptoCode}/invoices/pay | Pay Lightning Invoice
+
+
+# **store_lightning_node_api_connect_to_node**
+> store_lightning_node_api_connect_to_node(crypto_code, store_id, connect_to_node_request)
+
+Connect to lightning node
+
+Connect to another lightning node.
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.connect_to_node_request import ConnectToNodeRequest
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    connect_to_node_request = openapi_client.ConnectToNodeRequest() # ConnectToNodeRequest | 
+
+    try:
+        # Connect to lightning node
+        api_instance.store_lightning_node_api_connect_to_node(crypto_code, store_id, connect_to_node_request)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_connect_to_node: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **connect_to_node_request** | [**ConnectToNodeRequest**](ConnectToNodeRequest.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully connected |  -  |
+**422** | Unable to validate the request |  -  |
+**400** | Wellknown error codes are: &#x60;could-not-connect&#x60; |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_create_invoice**
+> LightningInvoiceData store_lightning_node_api_create_invoice(crypto_code, store_id, create_lightning_invoice_request)
+
+Create lightning invoice
+
+Create a lightning invoice.
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.create_lightning_invoice_request import CreateLightningInvoiceRequest
+from openapi_client.models.lightning_invoice_data import LightningInvoiceData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    create_lightning_invoice_request = openapi_client.CreateLightningInvoiceRequest() # CreateLightningInvoiceRequest | 
+
+    try:
+        # Create lightning invoice
+        api_response = api_instance.store_lightning_node_api_create_invoice(crypto_code, store_id, create_lightning_invoice_request)
+        print("The response of LightningStoreApi->store_lightning_node_api_create_invoice:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_create_invoice: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **create_lightning_invoice_request** | [**CreateLightningInvoiceRequest**](CreateLightningInvoiceRequest.md)|  | 
+
+### Return type
+
+[**LightningInvoiceData**](LightningInvoiceData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully created |  -  |
+**400** | Wellknown error codes are: &#x60;invoice-error&#x60; |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_balance**
+> LightningNodeBalanceData store_lightning_node_api_get_balance(crypto_code, store_id)
+
+Get node balance
+
+View balance of the lightning node
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_node_balance_data import LightningNodeBalanceData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get node balance
+        api_response = api_instance.store_lightning_node_api_get_balance(crypto_code, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_balance:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_balance: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+[**LightningNodeBalanceData**](LightningNodeBalanceData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning node balance for on-chain and off-chain funds |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_channels**
+> List[LightningChannelData] store_lightning_node_api_get_channels(crypto_code, store_id)
+
+Get channels
+
+View information about the current channels of the lightning node
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_channel_data import LightningChannelData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get channels
+        api_response = api_instance.store_lightning_node_api_get_channels(crypto_code, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_channels:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_channels: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+[**List[LightningChannelData]**](LightningChannelData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | list of channels |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_deposit_address**
+> str store_lightning_node_api_get_deposit_address(crypto_code, store_id)
+
+Get deposit address
+
+Get an on-chain deposit address for the lightning node 
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get deposit address
+        api_response = api_instance.store_lightning_node_api_get_deposit_address(crypto_code, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_deposit_address:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_deposit_address: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | deposit address |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_info**
+> LightningNodeInformationData store_lightning_node_api_get_info(crypto_code, store_id)
+
+Get node information
+
+View information about the lightning node
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_node_information_data import LightningNodeInformationData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get node information
+        api_response = api_instance.store_lightning_node_api_get_info(crypto_code, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_info:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_info: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+[**LightningNodeInformationData**](LightningNodeInformationData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning node information such as reachable nodeinfos |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_invoice**
+> LightningInvoiceData store_lightning_node_api_get_invoice(crypto_code, id, store_id)
+
+Get invoice
+
+View information about the requested lightning invoice
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_invoice_data import LightningInvoiceData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    id = 'id_example' # str | The id of the lightning invoice.
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get invoice
+        api_response = api_instance.store_lightning_node_api_get_invoice(crypto_code, id, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_invoice:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_invoice: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **id** | **str**| The id of the lightning invoice. | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+[**LightningInvoiceData**](LightningInvoiceData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning invoice data |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration or the specified invoice was not found  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_invoices**
+> List[LightningInvoiceData] store_lightning_node_api_get_invoices(crypto_code, store_id, pending_only=pending_only, offset_index=offset_index)
+
+Get invoices
+
+View information about the lightning invoices
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_invoice_data import LightningInvoiceData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    pending_only = False # bool | Limit to pending invoices only (optional) (default to False)
+    offset_index = 0 # float | The index of an invoice that will be used as the start of the list (optional) (default to 0)
+
+    try:
+        # Get invoices
+        api_response = api_instance.store_lightning_node_api_get_invoices(crypto_code, store_id, pending_only=pending_only, offset_index=offset_index)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_invoices:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_invoices: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **pending_only** | **bool**| Limit to pending invoices only | [optional] [default to False]
+ **offset_index** | **float**| The index of an invoice that will be used as the start of the list | [optional] [default to 0]
+
+### Return type
+
+[**List[LightningInvoiceData]**](LightningInvoiceData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning invoice data |  -  |
+**401** | Missing authorization |  -  |
+**503** | Unable to access the lightning node |  -  |
+**0** | Unexpected error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_payment**
+> LightningPaymentData store_lightning_node_api_get_payment(crypto_code, payment_hash, store_id)
+
+Get payment
+
+View information about the requested lightning payment
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_payment_data import LightningPaymentData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    payment_hash = 'payment_hash_example' # str | The payment hash of the lightning payment.
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+
+    try:
+        # Get payment
+        api_response = api_instance.store_lightning_node_api_get_payment(crypto_code, payment_hash, store_id)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_payment:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_payment: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **payment_hash** | **str**| The payment hash of the lightning payment. | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+
+### Return type
+
+[**LightningPaymentData**](LightningPaymentData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning payment data |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration or the specified invoice was not found  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_get_payments**
+> List[LightningPaymentData] store_lightning_node_api_get_payments(crypto_code, store_id, include_pending=include_pending, offset_index=offset_index)
+
+Get payments
+
+View information about the lightning payments
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_payment_data import LightningPaymentData
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    include_pending = False # bool | Also include pending payments (optional) (default to False)
+    offset_index = 0 # float | The index of an invoice that will be used as the start of the list (optional) (default to 0)
+
+    try:
+        # Get payments
+        api_response = api_instance.store_lightning_node_api_get_payments(crypto_code, store_id, include_pending=include_pending, offset_index=offset_index)
+        print("The response of LightningStoreApi->store_lightning_node_api_get_payments:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_get_payments: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **include_pending** | **bool**| Also include pending payments | [optional] [default to False]
+ **offset_index** | **float**| The index of an invoice that will be used as the start of the list | [optional] [default to 0]
+
+### Return type
+
+[**List[LightningPaymentData]**](LightningPaymentData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Lightning payment data |  -  |
+**401** | Missing authorization |  -  |
+**503** | Unable to access the lightning node |  -  |
+**0** | Unexpected error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_open_channel**
+> store_lightning_node_api_open_channel(crypto_code, store_id, open_lightning_channel_request)
+
+Open channel
+
+Open a channel with another lightning node. You should connect to that node first.
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.open_lightning_channel_request import OpenLightningChannelRequest
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    open_lightning_channel_request = openapi_client.OpenLightningChannelRequest() # OpenLightningChannelRequest | 
+
+    try:
+        # Open channel
+        api_instance.store_lightning_node_api_open_channel(crypto_code, store_id, open_lightning_channel_request)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_open_channel: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **open_lightning_channel_request** | [**OpenLightningChannelRequest**](OpenLightningChannelRequest.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully opened |  -  |
+**422** | Unable to validate the request |  -  |
+**400** | Wellknown error codes are: &#x60;channel-already-exists&#x60;, &#x60;cannot-afford-funding&#x60;, &#x60;need-more-confirmations&#x60;, &#x60;peer-not-connected&#x60; |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **store_lightning_node_api_pay_invoice**
+> LightningPaymentData store_lightning_node_api_pay_invoice(crypto_code, store_id, pay_lightning_invoice_request)
+
+Pay Lightning Invoice
+
+Pay a lightning invoice. In case the payment response times out, the status will be reported as pending and the final status can be resolved using the [Get payment](#operation/StoreLightningNodeApi_GetPayment) endpoint. The default wait time for payment responses is 30 seconds — it might take longer if multiple routes are tried or a hold invoice is getting paid.
+
+### Example
+
+* Basic Authentication (Basic):
+* Api Key Authentication (API_Key):
+```python
+import time
+import os
+import openapi_client
+from openapi_client.models.lightning_payment_data import LightningPaymentData
+from openapi_client.models.pay_lightning_invoice_request import PayLightningInvoiceRequest
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: Basic
+configuration = openapi_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: API_Key
+configuration.api_key['API_Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['API_Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.LightningStoreApi(api_client)
+    crypto_code = 'BTC' # str | The cryptoCode of the lightning-node to query
+    store_id = 'store_id_example' # str | The store id with the lightning-node configuration to query
+    pay_lightning_invoice_request = openapi_client.PayLightningInvoiceRequest() # PayLightningInvoiceRequest | 
+
+    try:
+        # Pay Lightning Invoice
+        api_response = api_instance.store_lightning_node_api_pay_invoice(crypto_code, store_id, pay_lightning_invoice_request)
+        print("The response of LightningStoreApi->store_lightning_node_api_pay_invoice:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LightningStoreApi->store_lightning_node_api_pay_invoice: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **crypto_code** | **str**| The cryptoCode of the lightning-node to query | 
+ **store_id** | **str**| The store id with the lightning-node configuration to query | 
+ **pay_lightning_invoice_request** | [**PayLightningInvoiceRequest**](PayLightningInvoiceRequest.md)|  | 
+
+### Return type
+
+[**LightningPaymentData**](LightningPaymentData.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [API_Key](../README.md#API_Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully paid |  -  |
+**202** | Payment initiated |  -  |
+**422** | Unable to validate the request |  -  |
+**400** | Wellknown error codes are: &#x60;could-not-find-route&#x60;, &#x60;generic-error&#x60; |  -  |
+**503** | Unable to access the lightning node |  -  |
+**404** | The lightning node configuration was not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

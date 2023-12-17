@@ -1,0 +1,37 @@
+# flake8: noqa
+
+# import apis into api package
+from openapi_client.api.api_keys_api import APIKeysApi
+from openapi_client.api.apps_api import AppsApi
+from openapi_client.api.authorization_api import AuthorizationApi
+from openapi_client.api.crowdfund_api import CrowdfundApi
+from openapi_client.api.custodians_api import CustodiansApi
+from openapi_client.api.health_api import HealthApi
+from openapi_client.api.invoices_api import InvoicesApi
+from openapi_client.api.lightning_internal_node_api import LightningInternalNodeApi
+from openapi_client.api.lightning_store_api import LightningStoreApi
+from openapi_client.api.lightning_address_api import LightningAddressApi
+from openapi_client.api.miscelleneous_api import MiscelleneousApi
+from openapi_client.api.notifications_current_user_api import NotificationsCurrentUserApi
+from openapi_client.api.payment_requests_api import PaymentRequestsApi
+from openapi_client.api.payout_processors_api import PayoutProcessorsApi
+from openapi_client.api.point_of_sale_api import PointOfSaleApi
+from openapi_client.api.pull_payments_management_api import PullPaymentsManagementApi
+from openapi_client.api.pull_payments_public_api import PullPaymentsPublicApi
+from openapi_client.api.pull_payments_payout_public_api import PullPaymentsPayoutPublicApi
+from openapi_client.api.server_info_api import ServerInfoApi
+from openapi_client.api.store_payment_methods_api import StorePaymentMethodsApi
+from openapi_client.api.store_payment_methods_lnurl_pay_api import StorePaymentMethodsLNURLPayApi
+from openapi_client.api.store_payment_methods_lightning_network_api import StorePaymentMethodsLightningNetworkApi
+from openapi_client.api.store_payment_methods_on_chain_api import StorePaymentMethodsOnChainApi
+from openapi_client.api.store_wallet_on_chain_api import StoreWalletOnChainApi
+from openapi_client.api.stores_api import StoresApi
+from openapi_client.api.stores_email_api import StoresEmailApi
+from openapi_client.api.stores_payout_processors_api import StoresPayoutProcessorsApi
+from openapi_client.api.stores_payouts_api import StoresPayoutsApi
+from openapi_client.api.stores_rates_api import StoresRatesApi
+from openapi_client.api.stores_rates_config_api import StoresRatesConfigApi
+from openapi_client.api.stores_users_api import StoresUsersApi
+from openapi_client.api.users_api import UsersApi
+from openapi_client.api.webhooks_api import WebhooksApi
+
