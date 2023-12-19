@@ -1818,16 +1818,6 @@
             "description": "If you are authenticated but forbidden to add new invoices"
           }
         },
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateInvoiceRequest"
-              }
-            }
-          }
-        },
         "security": [
           {
             "API_Key": [
@@ -12106,40 +12096,6 @@
             "properties": {
               "receiptData": {
                 "description": "A custom JSON object that represents information displayed on the receipt page of an invoice.",
-                "nullable": true
-              }
-            }
-          }
-        ]
-      },
-      "CreateInvoiceRequest": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/InvoiceDataBase"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "amount": {
-                "type": "string",
-                "format": "decimal",
-                "nullable": true,
-                "description": "The amount of the invoice. If null or unspecified, the invoice will be a top-up invoice. (ie. The invoice will consider any payment as a full payment)",
-                "example": "5.00"
-              },
-              "currency": {
-                "type": "string",
-                "description": "The currency of the invoice (if null, empty or unspecified, the currency will be the store's settings default)'",
-                "nullable": true,
-                "example": "USD"
-              },
-              "additionalSearchTerms": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "description": "Additional search term to help you find this invoice via text search",
                 "nullable": true
               }
             }

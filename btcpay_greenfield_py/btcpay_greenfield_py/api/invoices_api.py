@@ -29,7 +29,6 @@ from pydantic import StrictBool, StrictFloat, StrictInt, StrictStr
 
 from typing import List, Optional, Union
 
-from btcpay_greenfield_py.models.create_invoice_request import CreateInvoiceRequest
 from btcpay_greenfield_py.models.invoice_data import InvoiceData
 from btcpay_greenfield_py.models.invoice_payment_method_data_model import InvoicePaymentMethodDataModel
 from btcpay_greenfield_py.models.invoice_status import InvoiceStatus
@@ -625,7 +624,6 @@ class InvoicesApi:
     def invoices_create_invoice(
         self,
         store_id: Annotated[StrictStr, Field(description="The store to query")],
-        create_invoice_request: CreateInvoiceRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -645,8 +643,6 @@ class InvoicesApi:
 
         :param store_id: The store to query (required)
         :type store_id: str
-        :param create_invoice_request: (required)
-        :type create_invoice_request: CreateInvoiceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -671,7 +667,6 @@ class InvoicesApi:
 
         _param = self._invoices_create_invoice_serialize(
             store_id=store_id,
-            create_invoice_request=create_invoice_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -699,7 +694,6 @@ class InvoicesApi:
     def invoices_create_invoice_with_http_info(
         self,
         store_id: Annotated[StrictStr, Field(description="The store to query")],
-        create_invoice_request: CreateInvoiceRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -719,8 +713,6 @@ class InvoicesApi:
 
         :param store_id: The store to query (required)
         :type store_id: str
-        :param create_invoice_request: (required)
-        :type create_invoice_request: CreateInvoiceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -745,7 +737,6 @@ class InvoicesApi:
 
         _param = self._invoices_create_invoice_serialize(
             store_id=store_id,
-            create_invoice_request=create_invoice_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -773,7 +764,6 @@ class InvoicesApi:
     def invoices_create_invoice_without_preload_content(
         self,
         store_id: Annotated[StrictStr, Field(description="The store to query")],
-        create_invoice_request: CreateInvoiceRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -793,8 +783,6 @@ class InvoicesApi:
 
         :param store_id: The store to query (required)
         :type store_id: str
-        :param create_invoice_request: (required)
-        :type create_invoice_request: CreateInvoiceRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -819,7 +807,6 @@ class InvoicesApi:
 
         _param = self._invoices_create_invoice_serialize(
             store_id=store_id,
-            create_invoice_request=create_invoice_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -842,7 +829,6 @@ class InvoicesApi:
     def _invoices_create_invoice_serialize(
         self,
         store_id,
-        create_invoice_request,
         _request_auth,
         _content_type,
         _headers,
@@ -869,8 +855,6 @@ class InvoicesApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if create_invoice_request is not None:
-            _body_params = create_invoice_request
 
 
         # set the HTTP header `Accept`
@@ -880,19 +864,6 @@ class InvoicesApi:
             ]
         )
 
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params['Content-Type'] = _content_type
-        else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
-            if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
         _auth_settings: List[str] = [

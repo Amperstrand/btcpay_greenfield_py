@@ -1,15 +1,20 @@
-import openapi_client
-from openapi_client.api.health_api import HealthApi
-from openapi_client.rest import ApiException
+
+# Now you can import your library
+
+from  btcpay_greenfield_py import configuration
+from  btcpay_greenfield_py import api_client
+
+from btcpay_greenfield_py.api.health_api import HealthApi
+from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
 
 # Configure the host to your server
-configuration = openapi_client.Configuration(
-    host = "https://https://signet.demo.btcpayserver.org/"
+configuration = btcpay_greenfield_py_greenfield_client.Configuration(
+    host = "https://signet.demo.btcpayserver.org/"
 )
 
 # Create an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with btcpay_greenfield_py_greenfield_client.ApiClient(configuration) as api_client:
     # Create an instance of the HealthApi class
     api_instance = HealthApi(api_client)
     

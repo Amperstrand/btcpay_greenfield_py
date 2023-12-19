@@ -60,7 +60,6 @@ btcpay_greenfield_py/models/checkout_type.py
 btcpay_greenfield_py/models/connect_to_node_request.py
 btcpay_greenfield_py/models/create_crowdfund_app_request.py
 btcpay_greenfield_py/models/create_custodian_account_request.py
-btcpay_greenfield_py/models/create_invoice_request.py
 btcpay_greenfield_py/models/create_lightning_invoice_request.py
 btcpay_greenfield_py/models/create_on_chain_transaction_request.py
 btcpay_greenfield_py/models/create_on_chain_transaction_request_destination.py
@@ -216,7 +215,6 @@ docs/CheckoutType.md
 docs/ConnectToNodeRequest.md
 docs/CreateCrowdfundAppRequest.md
 docs/CreateCustodianAccountRequest.md
-docs/CreateInvoiceRequest.md
 docs/CreateLightningInvoiceRequest.md
 docs/CreateOnChainTransactionRequest.md
 docs/CreateOnChainTransactionRequestDestination.md
@@ -407,7 +405,6 @@ test/test_checkout_type.py
 test/test_connect_to_node_request.py
 test/test_create_crowdfund_app_request.py
 test/test_create_custodian_account_request.py
-test/test_create_invoice_request.py
 test/test_create_lightning_invoice_request.py
 test/test_create_on_chain_transaction_request.py
 test/test_create_on_chain_transaction_request_destination.py

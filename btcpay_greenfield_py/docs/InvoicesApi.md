@@ -192,7 +192,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **invoices_create_invoice**
-> InvoiceData invoices_create_invoice(store_id, create_invoice_request)
+> InvoiceData invoices_create_invoice(store_id)
 
 Create a new invoice
 
@@ -206,7 +206,6 @@ Create a new invoice
 import time
 import os
 import btcpay_greenfield_py
-from btcpay_greenfield_py.models.create_invoice_request import CreateInvoiceRequest
 from btcpay_greenfield_py.models.invoice_data import InvoiceData
 from btcpay_greenfield_py.rest import ApiException
 from pprint import pprint
@@ -239,11 +238,10 @@ with btcpay_greenfield_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = btcpay_greenfield_py.InvoicesApi(api_client)
     store_id = 'store_id_example' # str | The store to query
-    create_invoice_request = btcpay_greenfield_py.CreateInvoiceRequest() # CreateInvoiceRequest | 
 
     try:
         # Create a new invoice
-        api_response = api_instance.invoices_create_invoice(store_id, create_invoice_request)
+        api_response = api_instance.invoices_create_invoice(store_id)
         print("The response of InvoicesApi->invoices_create_invoice:\n")
         pprint(api_response)
     except Exception as e:
@@ -257,7 +255,6 @@ with btcpay_greenfield_py.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **str**| The store to query | 
- **create_invoice_request** | [**CreateInvoiceRequest**](CreateInvoiceRequest.md)|  | 
 
 ### Return type
 
@@ -269,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
