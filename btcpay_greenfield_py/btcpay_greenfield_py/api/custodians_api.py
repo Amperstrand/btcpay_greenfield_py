@@ -43,6 +43,7 @@ from btcpay_greenfield_py.models.withdrawal_simulation_result_data import Withdr
 from btcpay_greenfield_py.api_client import ApiClient
 from btcpay_greenfield_py.api_response import ApiResponse
 from btcpay_greenfield_py.rest import RESTResponseType
+import decimal
 
 
 class CustodiansApi:
