@@ -148,6 +148,36 @@ python examples/webhook_receiver.py
 
 See [`examples/webhook_receiver.py`](examples/webhook_receiver.py) for a stdlib-only receiver (no framework dependency).
 
+## Production middleware
+
+The `btcpay_greenfield_extras.middleware` module provides retry, timeout, logging, and metrics for production deployments.
+
+```python
+from btcpay_greenfield_py import AuthenticatedClient
+from btcpay_greenfield_extras import configure_production_client
+
+client = AuthenticatedClient(base_url="https://btcpay.example.com", token="...", prefix="token")
+configure_production_client(client, max_retries=3, timeout=30.0)
+```
+
+This wraps the underlying httpx client with:
+
+- **Retry** on 5xx + transient connection errors (`ConnectError`, `ReadTimeout`, `WriteTimeout`, `PoolTimeout`) with exponential backoff (0.5s → 1s → 2s)
+- **Timeout** defaults: 10s connect, 30s read, 10s write, 5s pool (the generated client defaults to no timeout, which is dangerous)
+- **Structured logging** via stdlib `logging` — logs `method + URL + status_code`. Auth headers are NEVER logged.
+- **Metrics callbacks** — optional `MetricsCallback` protocol for plugging into Prometheus, Datadog, etc.
+
+Custom metrics example:
+
+```python
+from btcpay_greenfield_extras import configure_production_client
+
+def my_metrics(*, method, url, status, duration_s, retried, error):
+    print(f"{method} {url} → {status} in {duration_s:.3f}s (retried={retried})")
+
+configure_production_client(client, metrics=my_metrics)
+```
+
 ## Regenerating
 
 The package under `btcpay_greenfield_py/` is generated. To regenerate after updating `swagger.json`:

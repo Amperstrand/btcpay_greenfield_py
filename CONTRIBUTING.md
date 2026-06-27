@@ -17,8 +17,11 @@ openapi-python-client.config.yaml         package-name override
 pyproject.toml                            Poetry + ruff + mypy + pytest config
 README.md                                 user-facing docs
 LICENSE                                   MIT
+CONTRIBUTING.md                           this file
+MIGRATION.md                              v0→v1 migration guide
 examples/                                 runnable example scripts
 tests/                                    hand-written tests (NOT generated)
+btcpay_greenfield_extras/                 hand-written production extensions (webhooks, middleware)
 scripts/                                  regen + post-process + CI helpers
 .github/workflows/ci.yml                  CI pipeline
 ```

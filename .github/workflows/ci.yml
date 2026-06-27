@@ -59,9 +59,10 @@ jobs:
       - run: pip install -e .
       - run: mypy examples/ tests/
 
-  # Job 4: Generated-surface meta-test across all supported Pythons.
-  generated-surface:
-    name: Generated surface (Python ${{ matrix.python-version }})
+  # Job 4: Unit tests (no network) across all supported Pythons.
+  # Covers generated-surface meta-tests + webhook verification + middleware.
+  unit-tests:
+    name: Unit tests (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -74,7 +75,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: pip install -e . pytest httpx attrs
-      - run: pytest tests/test_generated_surface.py -v
+      - run: pytest tests/ -v -m "not network" --tb=short
 
   # Job 5: Public smoke tests — no auth needed.
   smoke-public:
