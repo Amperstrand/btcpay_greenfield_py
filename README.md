@@ -95,6 +95,59 @@ with client as client:
 
 See [`examples/`](examples/) for runnable scripts.
 
+## Webhook handling
+
+BTCPay Server sends signed webhook events on invoice status changes (`InvoiceSettled`, `InvoiceExpired`, etc.). The `btcpay_greenfield_extras` package provides framework-agnostic HMAC-SHA256 signature verification and typed event dispatch.
+
+```python
+from btcpay_greenfield_extras import verify_and_parse
+
+# raw_body = the exact bytes from the HTTP request (NOT parsed JSON)
+# btcpay_sig = the BTCPay-Sig header value ("sha256=...")
+# secret = the webhook secret configured when creating the webhook in BTCPay
+event = verify_and_parse(raw_body, btcpay_sig, secret)
+
+if event.type_ == "InvoiceSettled":
+    print(f"invoice {event.invoice_id} settled")
+    print(f"  store: {event.store_id}")
+    print(f"  overpaid: {event.over_paid}")
+```
+
+For callback-based dispatch:
+
+```python
+from btcpay_greenfield_extras import WebhookEventProcessor
+
+processor = WebhookEventProcessor()
+processor.on("InvoiceSettled", lambda e: print(f"paid: {e.invoice_id}"))
+processor.on("InvoiceExpired", lambda e: print(f"expired: {e.invoice_id}"))
+processor.on_unknown(lambda e: print(f"unknown event: {e.type_}"))
+
+# In your webhook handler:
+processor.handle_raw(raw_body, btcpay_sig, secret)
+```
+
+### Flask integration
+
+```python
+from flask import Flask
+from btcpay_greenfield_extras.integrations.flask import create_btcpay_webhook_blueprint
+
+app = Flask(__name__)
+bp = create_btcpay_webhook_blueprint(secret="your-webhook-secret")
+bp.on("InvoiceSettled", lambda e: print(f"paid: {e.invoice_id}"))
+app.register_blueprint(bp, url_prefix="/webhooks/btcpay")
+```
+
+### Runnable receiver
+
+```bash
+python examples/webhook_receiver.py
+# prints a random secret on startup, listens on :8080
+```
+
+See [`examples/webhook_receiver.py`](examples/webhook_receiver.py) for a stdlib-only receiver (no framework dependency).
+
 ## Regenerating
 
 The package under `btcpay_greenfield_py/` is generated. To regenerate after updating `swagger.json`:

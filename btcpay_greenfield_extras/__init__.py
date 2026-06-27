@@ -10,6 +10,14 @@ package so they survive regeneration:
 
 from __future__ import annotations
 
+from .middleware import (
+    DEFAULT_TIMEOUT,
+    AsyncRetryTransport,
+    MetricsCallback,
+    RetryTransport,
+    configure_production_client,
+    create_logging_hooks,
+)
 from .webhooks import (
     InvalidSignatureError,
     UnknownEventTypeError,
@@ -26,4 +34,10 @@ __all__ = (
     "parse_event",
     "verify_and_parse",
     "verify_signature",
+    "DEFAULT_TIMEOUT",
+    "AsyncRetryTransport",
+    "MetricsCallback",
+    "RetryTransport",
+    "configure_production_client",
+    "create_logging_hooks",
 )
