@@ -1,0 +1,79 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.whl
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Virtualenvs ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Testing / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.cache
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.ruff_cache/
+
+# --- IDE / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Poetry ---
+poetry.lock
+
+# --- OpenCode / OMO working state ---
+.omo/
+.opencode/
+
+# --- Sandboxes & local artifacts ---
+.sandbox/
+sandbox/
+swagger_from_local_btcpayserver.json
+
+# --- Secrets / env files ---
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+credentials.*

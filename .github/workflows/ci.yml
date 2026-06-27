@@ -1,0 +1,117 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # Job 1: Verify the committed btcpay_greenfield_py/ matches what
+  # openapi-python-client produces from swagger.json + config.
+  # Single Python version — the generator output is deterministic.
+  regenerate-check:
+    name: Regenerate check (no drift)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install openapi-python-client
+        run: pip install "openapi-python-client>=0.21,<0.30"
+      - name: Regenerate and diff
+        run: ./scripts/regenerate-and-diff.sh
+
+  # Job 2: Lint across all supported Python versions.
+  lint:
+    name: Ruff lint (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install "ruff>=0.6,<0.10"
+      - run: pip install -e .
+      - run: ruff check btcpay_greenfield_py/ examples/ tests/
+
+  # Job 3: Type-check (3.12 only — mypy config pins python_version = "3.12").
+  typecheck:
+    name: Mypy (examples + tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install "mypy>=1.10,<2" httpx attrs
+      - run: pip install -e .
+      - run: mypy examples/ tests/
+
+  # Job 4: Generated-surface meta-test across all supported Pythons.
+  generated-surface:
+    name: Generated surface (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -e . pytest httpx attrs
+      - run: pytest tests/test_generated_surface.py -v
+
+  # Job 5: Public smoke tests — no auth needed.
+  smoke-public:
+    name: Public smoke (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    env:
+      BTCPAY_HOST: https://testnet.demo.btcpayserver.org
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -e . pytest httpx attrs
+      - run: pytest tests/test_smoke_public.py -v --tb=short
+
+  # Job 6: Authenticated smoke tests with auto-registration.
+  # Registers a throwaway account on testnet.demo.btcpayserver.org, creates an
+  # API key + store, runs the authed tests, then cleans up the API key.
+  smoke-authed:
+    name: Authed smoke (auto-registered)
+    runs-on: ubuntu-latest
+    env:
+      BTCPAY_HOST: https://testnet.demo.btcpayserver.org
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e . pytest httpx attrs
+      - name: Auto-register testnet account
+        run: |
+          python3 scripts/setup_testnet_creds.py >> "$GITHUB_ENV"
+      - name: Run authed smoke tests
+        run: pytest tests/test_smoke_authed.py -v --tb=short

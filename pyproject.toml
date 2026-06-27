@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "btcpay-greenfield-py"
+version = "1.0.0"
+description = "Auto-generated modern Python client (httpx + attrs) for the BTCPay Server Greenfield API v1"
+authors = ["Amperstrand <noreply@amperstrand.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/Amperstrand/btcpay_greenfield_py"
+repository = "https://github.com/Amperstrand/btcpay_greenfield_py"
+keywords = ["btcpay", "btcpayserver", "greenfield", "bitcoin", "lightning", "payment-processing", "openapi", "openapi-client"]
+packages = [{ include = "btcpay_greenfield_py" }]
+include = ["btcpay_greenfield_py/py.typed"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business :: Financial",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = ">=0.23.1,<0.29.0"
+attrs = ">=22.2.0"
+
+[tool.poetry.group.dev.dependencies]
+openapi-python-client = ">=0.21,<0.30"
+ruff = ">=0.6,<0.10"
+mypy = ">=1.10,<2"
+pytest = ">=8,<9"
+pytest-asyncio = ">=0.24,<0.26"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "I", "UP"]
+
+[tool.mypy]
+# Target Python 3.12 (the floor we test on in CI) rather than 3.11, because
+# some installed stubs (numpy in particular) use PEP 695 `type` statements
+# that mypy only accepts when python_version >= 3.12.
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true
+warn_unused_ignores = false
+check_untyped_defs = false
+disable_error_code = ["attr-defined", "union-attr", "assignment", "return-value", "arg-type"]
+
+# The generated models use attrs @define, whose synthesized __init__ mypy
+# doesn't always see cleanly. These per-module overrides keep mypy useful on
+# hand-written code without noise from the generated layer.
+[[tool.mypy.overrides]]
+module = "btcpay_greenfield_py.*"
+disable_error_code = ["attr-defined", "union-attr", "assignment", "return-value", "arg-type", "call-arg", "typeddict-item", "name-defined"]
+
+[[tool.mypy.overrides]]
+module = ["numpy", "numpy.*"]
+follow_imports = "skip"
+ignore_errors = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "examples"]
+asyncio_mode = "auto"

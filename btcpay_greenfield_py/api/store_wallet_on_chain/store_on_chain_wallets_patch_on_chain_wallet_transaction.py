@@ -1,0 +1,249 @@
+from http import HTTPStatus
+from typing import Any, cast
+from urllib.parse import quote
+
+import httpx
+
+from ... import errors
+from ...client import AuthenticatedClient, Client
+from ...models.on_chain_wallet_transaction_data import OnChainWalletTransactionData
+from ...models.patch_on_chain_transaction_request import PatchOnChainTransactionRequest
+from ...types import UNSET, Response, Unset
+
+
+def _safe_from_dict(parser, response):
+    if not response.content:
+        return None
+    try:
+        return parser(response.json())
+    except Exception:
+        return None
+
+
+def _get_kwargs(
+    store_id: str,
+    crypto_code: str,
+    transaction_id: str,
+    *,
+    body: PatchOnChainTransactionRequest,
+    force: str | Unset = UNSET,
+) -> dict[str, Any]:
+    headers: dict[str, Any] = {}
+
+    params: dict[str, Any] = {}
+
+    params["force"] = force
+
+    params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
+
+    _kwargs: dict[str, Any] = {
+        "method": "patch",
+        "url": "/api/v1/stores/{store_id}/payment-methods/onchain/{crypto_code}/wallet/transactions/{transaction_id}".format(
+            store_id=quote(str(store_id), safe=""),
+            crypto_code=quote(str(crypto_code), safe=""),
+            transaction_id=quote(str(transaction_id), safe=""),
+        ),
+        "params": params,
+    }
+
+    _kwargs["json"] = body.to_dict()
+
+    headers["Content-Type"] = "application/json"
+
+    _kwargs["headers"] = headers
+    return _kwargs
+
+
+def _parse_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Any | OnChainWalletTransactionData | None:
+    if response.status_code == 200:
+        response_200 = _safe_from_dict(OnChainWalletTransactionData.from_dict, response)
+
+        return response_200
+
+    if response.status_code == 403:
+        response_403 = cast(Any, None)
+        return response_403
+
+    if response.status_code == 404:
+        response_404 = cast(Any, None)
+        return response_404
+
+    if client.raise_on_unexpected_status:
+        raise errors.UnexpectedStatus(response.status_code, response.content)
+    else:
+        return None
+
+
+def _build_response(
+    *, client: AuthenticatedClient | Client, response: httpx.Response
+) -> Response[Any | OnChainWalletTransactionData]:
+    return Response(
+        status_code=HTTPStatus(response.status_code),
+        content=response.content,
+        headers=response.headers,
+        parsed=_parse_response(client=client, response=response),
+    )
+
+
+def sync_detailed(
+    store_id: str,
+    crypto_code: str,
+    transaction_id: str,
+    *,
+    client: AuthenticatedClient,
+    body: PatchOnChainTransactionRequest,
+    force: str | Unset = UNSET,
+) -> Response[Any | OnChainWalletTransactionData]:
+    """Patch store on-chain wallet transaction info
+
+     Patch store on-chain wallet transaction info
+
+    Args:
+        store_id (str):
+        crypto_code (str):
+        transaction_id (str):
+        force (str | Unset):
+        body (PatchOnChainTransactionRequest):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[Any | OnChainWalletTransactionData]
+    """
+
+    kwargs = _get_kwargs(
+        store_id=store_id,
+        crypto_code=crypto_code,
+        transaction_id=transaction_id,
+        body=body,
+        force=force,
+    )
+
+    response = client.get_httpx_client().request(
+        **kwargs,
+    )
+
+    return _build_response(client=client, response=response)
+
+
+def sync(
+    store_id: str,
+    crypto_code: str,
+    transaction_id: str,
+    *,
+    client: AuthenticatedClient,
+    body: PatchOnChainTransactionRequest,
+    force: str | Unset = UNSET,
+) -> Any | OnChainWalletTransactionData | None:
+    """Patch store on-chain wallet transaction info
+
+     Patch store on-chain wallet transaction info
+
+    Args:
+        store_id (str):
+        crypto_code (str):
+        transaction_id (str):
+        force (str | Unset):
+        body (PatchOnChainTransactionRequest):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Any | OnChainWalletTransactionData
+    """
+
+    return sync_detailed(
+        store_id=store_id,
+        crypto_code=crypto_code,
+        transaction_id=transaction_id,
+        client=client,
+        body=body,
+        force=force,
+    ).parsed
+
+
+async def asyncio_detailed(
+    store_id: str,
+    crypto_code: str,
+    transaction_id: str,
+    *,
+    client: AuthenticatedClient,
+    body: PatchOnChainTransactionRequest,
+    force: str | Unset = UNSET,
+) -> Response[Any | OnChainWalletTransactionData]:
+    """Patch store on-chain wallet transaction info
+
+     Patch store on-chain wallet transaction info
+
+    Args:
+        store_id (str):
+        crypto_code (str):
+        transaction_id (str):
+        force (str | Unset):
+        body (PatchOnChainTransactionRequest):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Response[Any | OnChainWalletTransactionData]
+    """
+
+    kwargs = _get_kwargs(
+        store_id=store_id,
+        crypto_code=crypto_code,
+        transaction_id=transaction_id,
+        body=body,
+        force=force,
+    )
+
+    response = await client.get_async_httpx_client().request(**kwargs)
+
+    return _build_response(client=client, response=response)
+
+
+async def asyncio(
+    store_id: str,
+    crypto_code: str,
+    transaction_id: str,
+    *,
+    client: AuthenticatedClient,
+    body: PatchOnChainTransactionRequest,
+    force: str | Unset = UNSET,
+) -> Any | OnChainWalletTransactionData | None:
+    """Patch store on-chain wallet transaction info
+
+     Patch store on-chain wallet transaction info
+
+    Args:
+        store_id (str):
+        crypto_code (str):
+        transaction_id (str):
+        force (str | Unset):
+        body (PatchOnChainTransactionRequest):
+
+    Raises:
+        errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
+        httpx.TimeoutException: If the request takes longer than Client.timeout.
+
+    Returns:
+        Any | OnChainWalletTransactionData
+    """
+
+    return (
+        await asyncio_detailed(
+            store_id=store_id,
+            crypto_code=crypto_code,
+            transaction_id=transaction_id,
+            client=client,
+            body=body,
+            force=force,
+        )
+    ).parsed
