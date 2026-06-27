@@ -8,7 +8,7 @@ license = "MIT"
 homepage = "https://github.com/Amperstrand/btcpay_greenfield_py"
 repository = "https://github.com/Amperstrand/btcpay_greenfield_py"
 keywords = ["btcpay", "btcpayserver", "greenfield", "bitcoin", "lightning", "payment-processing", "openapi", "openapi-client"]
-packages = [{ include = "btcpay_greenfield_py" }]
+packages = [{ include = "btcpay_greenfield_py" }, { include = "btcpay_greenfield_extras" }]
 include = ["btcpay_greenfield_py/py.typed"]
 classifiers = [
     "Development Status :: 4 - Beta",
